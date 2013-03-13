@@ -1,0 +1,44 @@
+[Wed Mar 13 00:18:35 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 0 to 2 : URL /index.php
+[Wed Mar 13 00:18:36 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 1356 to 667 : URL /install.php
+[Wed Mar 13 00:18:36 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 6372 to 1606 : URL /modules/install/tpl/style.css, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:20:26 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 1356 to 667 : URL /install.php
+[Wed Mar 13 00:20:29 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 0 to 2 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:20:29 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2934 to 932 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:20:35 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2101 to 854 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:20:53 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 0 to 2 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:20:53 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2227 to 914 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:21:18 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 0 to 2 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:21:18 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2227 to 914 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:21:27 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2278 to 912 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:21:35 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2278 to 912 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:26:50 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2934 to 932 : URL /install.php
+[Wed Mar 13 00:26:54 2013] [error] [client 127.0.0.1] PHP Warning:  file_put_contents(./datas/config.php): failed to open stream: Permission denied in /home/kiryl/job/projects/belarus/modules/install/inc/install.install.php on line 346, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:26:54 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2309 to 974 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:27:17 2013] [error] [client 127.0.0.1] PHP Warning:  file_put_contents(./datas/config.php): failed to open stream: Permission denied in /home/kiryl/job/projects/belarus/modules/install/inc/install.install.php on line 346, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:27:17 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2309 to 974 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:28:30 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2097 to 855 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:28:41 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2278 to 911 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:29:00 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 15557 to 2955 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:29:56 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 3531 to 913 : URL /install.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:29:59 2013] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'Exception' with message 'Your "datas/cache/templates/" is not writable' in /home/kiryl/job/projects/belarus/system/cotemplate.php:282\nStack trace:\n#0 /home/kiryl/job/projects/belarus/system/cotemplate.php(72): XTemplate->restart('themes/nemesis/...')\n#1 /home/kiryl/job/projects/belarus/system/header.php(87): XTemplate->__construct('themes/nemesis/...')\n#2 /home/kiryl/job/projects/belarus/modules/index/index.php(46): require_once('/home/kiryl/job...')\n#3 /home/kiryl/job/projects/belarus/index.php(126): require_once('/home/kiryl/job...')\n#4 {main}\n  thrown in /home/kiryl/job/projects/belarus/system/cotemplate.php on line 282, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:29:59 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 715 to 309 : URL /index.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 4984 to 1841 : URL /index.php, referer: http://belarus.tio/install.php
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 943 to 502 : URL /themes/nemesis/css/reset.css, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 986 to 411 : URL /themes/nemesis/css/extras.css, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 11295 to 2869 : URL /themes/nemesis/css/default.css, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 1369 to 707 : URL /themes/nemesis/css/modalbox.css, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 3405 to 1063 : URL /js/jquery.history.min.js, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 2871 to 1356 : URL /js/jqModal.min.js, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 8644 to 2930 : URL /js/base.js, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 19 to 21 : URL /js/ajax_on.js, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 853 to 473 : URL /plugins/search/js/hl.min.js, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 30 to 32 : URL /themes/nemesis/js/js.js, referer: http://belarus.tio/
+[Wed Mar 13 00:30:45 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 94839 to 33598 : URL /js/jquery.min.js, referer: http://belarus.tio/
+[Wed Mar 13 00:30:50 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 5180 to 1829 : URL /login.php, referer: http://belarus.tio/
+[Wed Mar 13 00:31:00 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 0 to 2 : URL /login.php, referer: http://belarus.tio/login.php
+[Wed Mar 13 00:31:01 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 5634 to 2027 : URL /index.php, referer: http://belarus.tio/login.php
+[Wed Mar 13 00:33:42 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 6176 to 1833 : URL /admin.php, referer: http://belarus.tio/index.php
+[Wed Mar 13 00:33:42 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 9813 to 3026 : URL /system/admin/tpl/admin.css, referer: http://belarus.tio/admin.php
+[Wed Mar 13 00:33:43 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 7661 to 1731 : URL /system/admin/tpl/fb-buttons.css, referer: http://belarus.tio/system/admin/tpl/admin.css
+[Wed Mar 13 00:33:46 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 29989 to 4608 : URL /admin.php, referer: http://belarus.tio/admin.php
+[Wed Mar 13 00:34:11 2013] [debug] mod_deflate.c(615): [client 127.0.0.1] Zlib: Compressed 7634 to 2169 : URL /admin.php, referer: http://belarus.tio/admin.php?m=extensions

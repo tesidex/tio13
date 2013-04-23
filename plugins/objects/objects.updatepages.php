@@ -19,7 +19,7 @@ defined('COT_CODE') or die('Wrong URL.');
 
 //cot_print($rpage);
 
-global $db;
+global $db,$db_pages;
 if ($rpage['page_cat'] == 'location') {
 
     $updres = $db->update('bel_pages',

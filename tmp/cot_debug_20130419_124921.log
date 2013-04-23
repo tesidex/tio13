@@ -1,0 +1,202 @@
+/home/kiryl/job/projects/belarus/plugins/objects/objects.search.php, 34:
+arg #0 = Array
+(
+    [bel_pages] => Array
+        (
+            [is_image_show] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => is_image_show
+                    [field_type] => checkbox
+                    [field_html] => <input type="hidden" name="{$name}" value="{$value_off}" /><label><input type="checkbox" name="{$name}" value="{$value}"{$checked} /> {$title}</label>
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => SHOW IMAGE
+                )
+
+            [priority] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => priority
+                    [field_type] => checkbox
+                    [field_html] => <input type="hidden" name="{$name}" value="{$value_off}" /><label><input type="checkbox" name="{$name}" value="{$value}"{$checked}{$attrs} /> {$title}</label>
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => ПРИОРИТЕТ ОБЪЕКТА
+                )
+
+            [address] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => address
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}"  maxlength="255" />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => ADDRESS
+                )
+
+            [avatar] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => avatar
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}" {$attrs} />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => Аватарка страницы
+                )
+
+            [location_id] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => location_id
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}"  maxlength="255" />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => LOCATION ID
+                )
+
+            [district_id] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => district_id
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}"  maxlength="255" />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => DISTRICT ID
+                )
+
+            [region_id] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => region_id
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}"  maxlength="255" />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => REGION ID
+                )
+
+            [type_id] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => type_id
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}"  maxlength="255" />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => TYPE ID
+                )
+
+            [map_longitude] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => map_longitude
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}"  maxlength="255" />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => LONGITUDE
+                )
+
+            [map_latitude] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => map_latitude
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}"  maxlength="255" />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => LATITUDE
+                )
+
+            [newspaper_id] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => newspaper_id
+                    [field_type] => input
+                    [field_html] => <input type="text" name="{$name}" value="{$value}"  maxlength="255" />
+                    [field_variants] => 
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => NEWSPAPER ID
+                )
+
+            [object_type] => Array
+                (
+                    [field_location] => bel_pages
+                    [field_name] => object_type
+                    [field_type] => select
+                    [field_html] => <select name="{$name}">{$options}</select>{$error}
+                    [field_variants] => Дворец,Жилой дом,Замок,Костел,Мечеть,Музей,Остальное,Памятник,Ратуша,Синагога,Усадьба,Церковь
+                    [field_params] => 
+                    [field_default] => 
+                    [field_required] => 0
+                    [field_enabled] => 1
+                    [field_parse] => HTML
+                    [field_description] => Тип объекта архитектуры
+                )
+
+        )
+
+    [bel_structure] => Array
+        (
+        )
+
+    [cot_news] => Array
+        (
+        )
+
+    [cot_users] => Array
+        (
+        )
+
+)
+
+----------------

@@ -1,0 +1,90 @@
+/* 1. Errors
+-------------------------------------------------- */
+div.error, div.warning, div.done, div.help { line-height: 2em; margin: 20px 0; padding: 10px 50px; background-position: 15px 50%; background-repeat: no-repeat; clear: both;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px; }
+div.error { color: #d8000c; background-color: #ffbaba; background-image: url(../../../images/icons/default/error.png); border: 1px solid #d8000c; }
+div.warning { color: #9f6000; background-color: #feefb3; background-image: url(../../../images/icons/default/warning.png); border: 1px solid #9f6000; }
+div.done { color: #4f8a10; background-color: #dff2bf; background-image: url(../../../images/icons/default/done.png); border: 1px solid #4f8a10; }
+div.help { color: #00529b; background-color: #bde5f8; background-image: url(../../../images/icons/default/help.png); border: 1px solid #00529b; }
+
+/* 2. Tables
+-------------------------------------------------- */
+table td 	{ vertical-align: top; }
+
+table.flat	{ border-collapse: collapse; width: 100%; }
+table.flat td 	{ padding: 2px; margin: 0; border: 0; }
+
+table.main 	{ border-collapse: collapse; width: 100%; }
+table.main td 	{ padding: 2px 0; margin: 0; border: 0; }
+
+table.cells 	{ border-collapse: collapse; width: 100%; }
+table.cells td	{ padding: 4px 8px; border: 1px solid #e7e7e7; }
+
+table.list 	{ border-collapse: collapse; width: 100%; }
+table.list td 	{ padding: 5px 5px 5px 0; border-bottom: 1px dashed #ccc; }
+
+table.fico 		{ border-collapse: collapse; width: 100%; }
+table.fico td		{ padding: 5px 0; margin: 0; border: 0; }
+table.fico td img	{ margin-right: 10px; vertical-align: middle; }
+
+.coltop		{ text-align: center; vertical-align: middle; font-size: .9em; background-color: #EEEEEE!important; }
+.coltop img	{ vertical-align: middle; }
+.centerall 	{ text-align: center; vertical-align: middle; }
+.valid 		{ height: 48px; text-align: center; vertical-align: middle; border: 0!important; }
+
+.odd	{ background-color: #fff!important; }
+.even	{ background-color: #f1f1f1!important; }
+.code 	{ color: #000; background: #e3e3e3; border: 1px solid #ccc; padding: 2px 15px; margin: 5px 0; font-family: monospace; font-size: 1.1em; white-space: pre-wrap; }
+
+/* 3. Pagination
+-------------------------------------------------- */
+.paging     { margin: 10px 0 10px 0; text-align: center; font-size: .9em; }
+.pagenav_prev, .pagenav_next, .pagenav_first, .pagenav_last, .pagenav_pages, .pagenav_current { padding: 2px 2px; margin: 1px;  }
+.pagenav_prev a, .pagenav_next a, .pagenav_first a, .pagenav_last a, .pagenav_pages a   { border: 1px solid #ccc; padding: 1px 5px; margin: 0px; -moz-border-radius: 3px;
+border-radius: 3px; color: #383838; background-color: #f7f7f7; text-decoration: none; }
+.pagenav_prev a:hover, .pagenav_next a:hover, .pagenav_first a:hover, .pagenav_last a:hover, .pagenav_pages a:hover { background: #eaeef1; }
+.pagenav_current    { color: #555; border: 1px solid #d8503a; padding: 2px 5px; margin: 0px; -moz-border-radius: 3px;
+border-radius: 3px; color: #868686; background-color: #d8503a; text-decoration: none; }
+.pagenav_current a  { color: white; text-decoration: none; }
+.pagenav_small      { text-align: right; font-size: .9em; }
+.spaced				{ border: none!important; margin: 0 8px!important; padding: 0!important; }
+
+/* 4. Polls
+-------------------------------------------------- */
+.bar_front 	{ background-color: #d8503a; border-right: 0px solid #333; color: #ddd; height: 12px; font-size: 10px; }
+.bar_back 	{ background-color: #fff; border: 1px solid #ccc; height: 12px; padding: 1px; }
+
+.progress-blogster .bar,
+.progress .bar-blogster {
+  background-color: #da643e;
+  background-image: -moz-linear-gradient(top, #dc7041, #d8533b);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc7041), to(#d8533b));
+  background-image: -webkit-linear-gradient(top, #dc7041, #d8533b);
+  background-image: -o-linear-gradient(top, #dc7041, #d8533b);
+  background-image: linear-gradient(to bottom, #dc7041, #d8533b);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff57a957', GradientType=0);
+}
+
+/* 5. News
+-------------------------------------------------- */
+.newsdetails {
+  font-size: 11px;
+  color: #A3A3A3;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.newsdesc {
+  font-size: 12px;
+  clear: both;
+  color: #6E6E6E;
+}
+
+/* 6. Comments
+-------------------------------------------------- */
+.commentsdate { font-size: 11px; color: #6E6E6E; }
+
+/* 7. Various
+-------------------------------------------------- */

@@ -1,0 +1,9 @@
+html { height: 100%; }
+body {
+  height: 100%;
+  background: #fafafa url("../img/creamdust.png") repeat;
+  padding: 20px;
+  color: #383838;
+  font-family: "Verdana", "Helvetica Neue", "Verdana";
+  font-size: 13px;
+}

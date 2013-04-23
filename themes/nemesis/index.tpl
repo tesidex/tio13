@@ -42,7 +42,7 @@
 			</div>
 			<!-- ENDIF -->
 		</div>
-
+				{PHP|pagearchive('newspaper')}
 		<!-- IF {PHP.cot_plugins_active.recentitems} -->
 		<div class="clear block">
 			<h2 class="warning"><a href="{PHP|cot_url('plug','e=recentitems')}">{PHP.L.recentitems_title}</a></h2>

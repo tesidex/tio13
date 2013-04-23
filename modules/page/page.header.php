@@ -20,7 +20,8 @@ defined('COT_CODE') or die('Wrong URL');
 if ($usr['id'] > 0 && cot_auth('page', 'any', 'A'))
 {
 	require_once cot_incfile('page', 'module');
-	$sql_page_queued = $db->query("SELECT COUNT(*) FROM $db_pages WHERE page_state=1");
+	$sql_page_queued = $db->query("SELECT COUNT(*) FROM `cot_pages`
+	     WHERE page_state=1");
 	$sys['pagesqueued'] = $sql_page_queued->fetchColumn();
 
 	if ($sys['pagesqueued'] > 0)

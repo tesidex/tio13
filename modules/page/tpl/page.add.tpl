@@ -22,6 +22,23 @@
 						<td>{PAGEADD_FORM_AUTHOR}</td>
 					</tr>
 					<tr>
+						<td>LOCATION:</td>
+						<td>{PAGEFORM_LOCATION_SELECT}</td>
+					</tr>
+					<tr>
+						<td>DISTRICT:</td>
+						<td>{PAGEFORM_DISTRICT_SELECT}</td>
+					</tr>
+					<tr>
+						<td>REGION:</td>
+						<td>{PAGEFORM_REGION_SELECT}</td>
+					</tr>
+					<tr>
+					     <td>{PAGEADD_FORM_OBJECT_TYPE_TITLE}</td>
+					     <td>{PAGEFORM_OBJECTTYPE_SELECT}</td>
+					</tr>	
+					
+					<tr>
 						<td>{PHP.L.Alias}:</td>
 						<td>{PAGEADD_FORM_ALIAS}</td>
 					</tr>

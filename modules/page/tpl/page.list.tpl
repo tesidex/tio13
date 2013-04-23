@@ -43,5 +43,5 @@
 			</div>
 			{FILE "{PHP.cfg.themes_dir}/{PHP.theme}/inc/contact.tpl"}
 		</div>
-
+				{PHP|pagearchive('newspaper')}
 <!-- END: MAIN -->

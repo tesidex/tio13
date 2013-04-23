@@ -596,6 +596,7 @@ function cot_import_pagenav($var_name, $max_items = 0)
 		}
 		$offset = ($page - 1) * $max_items;
 		$urlnum = $page <= 1 ? 0 : $page;
+		
 	}
 	else
 	{

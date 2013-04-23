@@ -5,7 +5,7 @@
  * @package Cotonti
  * @version 0.9.0
  * @author Cotonti Team
- * @copyright Copyright (c) Cotonti Team 2008-2012
+ * @copyright Copyright (c) Cotonti Team 2008-2013
  * @license BSD
  */
 
@@ -30,8 +30,8 @@ $cfg['mysqlcollate'] = 'utf8_unicode_ci';
 // ========================
 
 $cfg['mainurl'] = 'http://belarus.tio';
-$cfg['site_id'] = '33256724ae4dbe8f1f6a54aab2c96349';
-$cfg['secret_key'] = 'd755bdca0201bcfcf1ed39d32781eb79';
+$cfg['site_id'] = 'd46104f8db811335f4afa0bdcc7790e8';
+$cfg['secret_key'] = '10428de622baffa1a701d60538bdd278';
 $cfg['multihost'] = FALSE;			// Allow multiple host names for this site
 
 // ========================
@@ -49,10 +49,10 @@ $cfg['admintheme'] = '';			// Put custom administration theme name here
 // Performance-related settings
 // ========================
 
-$cfg['cache'] = TRUE;			// Enable data caching
+$cfg['cache'] = FALSE;			// Enable data caching
 $cfg['cache_drv'] = '';			// Cache driver name to use on your server (if available)
 								// Possible values: APC, eAccelerator, Memcache, Xcache
-$cfg['xtpl_cache'] = TRUE;		// Enable XTemplate structure disk cache. Should be TRUE on production sites
+$cfg['xtpl_cache'] = FALSE;		// Enable XTemplate structure disk cache. Should be TRUE on production sites
 $cfg['html_cleanup'] = FALSE;	// Wipe extra spaces and breaks from HTML to get smaller footprint
 
 $cfg['cache_index'] = FALSE;    // Static page cache for guests on index
@@ -73,7 +73,7 @@ $cfg['display_errors'] = TRUE;		// Display error messages. Switch it FALSE on pr
 $cfg['redirmode'] = FALSE;			// 0 or 1, Set to '1' if you cannot sucessfully log in (IIS servers)
 $cfg['xmlclient'] = FALSE;  		// For testing-purposes only, else keep it off.
 $cfg['ipcheck'] = FALSE;  			// Will kill the logged-in session if the IP has changed
-$cfg['authcache'] = TRUE;			// Auth cache in SQL tables. Set it FALSE if your huge database
+$cfg['authcache'] = FALSE;			// Auth cache in SQL tables. Set it FALSE if your huge database
 									// goes down because of that
 $cfg['customfuncs'] = FALSE;		// Includes file named functions.custom.php
 $cfg['new_install'] = false;			// This setting denotes a new install step and redirects you to the install page
@@ -149,14 +149,14 @@ $db_cache 			= $db_x.'cache';
 $db_cache_bindings	= $db_x.'cache_bindings';
 $db_core			= $db_x.'core';
 $db_config 			= $db_x.'config';
-$db_groups 			= $db_x.'groups';
-$db_groups_users 	= $db_x.'groups_users';
+$db_groups 			= 'cot_groups';
+$db_groups_users 	= 'cot_groups_users';
 $db_logger 			= $db_x.'logger';
 $db_online 			= $db_x.'online';
 $db_extra_fields	= $db_x.'extra_fields';
 $db_plugins 		= $db_x.'plugins';
 $db_structure 		= $db_x.'structure';
 $db_updates			= $db_x.'updates';
-$db_users 			= $db_x.'users';
+$db_users 			= 'cot_users';
 
 ?>

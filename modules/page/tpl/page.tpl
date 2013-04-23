@@ -3,7 +3,7 @@
 		<div class="col3-2 first">
 			<div class="block">
 				<h2 class="page">{PAGE_TITLE}</h2>
-				<div class="combox">{PAGE_COMMENTS_COUNT}</div>
+				<div class="combox">{PAGE_BEWERTUNGEN_COUNT}</div>
 				<h3>{PAGE_SHORTTITLE}</h3>
 				<!-- IF {PAGE_DESC} --><p class="small">{PAGE_DESC}</p><!-- ENDIF -->
 				<div class="clear desc">
@@ -20,6 +20,7 @@
 						<strong>{PHP.L.Filedunder}:</strong>{PAGE_CATPATH}
 					</p>
 				</div>
+				{OBJECTSSEARCH}
 				<div class="clear textbox">{PAGE_TEXT}</div>
 <!-- BEGIN: PAGE_FILE -->
 				<div class="download">
@@ -34,7 +35,7 @@
 				</div>
 <!-- END: PAGE_FILE -->
 			</div>
-			{PAGE_COMMENTS_DISPLAY}
+			{PAGE_BEWERTUNGEN_DISPLAY}
 		</div>
 
 		<div class="col3-1">
@@ -51,6 +52,7 @@
 					<li>{PAGE_ADMIN_DELETE}</li>
 				</ul>
 			</div>
+
 <!-- END: PAGE_ADMIN -->
 			{FILE "{PHP.cfg.themes_dir}/{PHP.theme}/inc/contact.tpl"}
 <!-- BEGIN: PAGE_MULTI -->
@@ -60,6 +62,7 @@
 				<p class="paging">{PAGE_MULTI_TABNAV}</p>
 			</div>
 <!-- END: PAGE_MULTI -->
+
 		</div>
 
 <!-- END: MAIN -->

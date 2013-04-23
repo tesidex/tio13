@@ -23,7 +23,6 @@ $p = cot_import('p', 'G', 'ARR'); // filter values
 $maxrowsperpage = ($cfg['page']['cat_' . $c]['maxrowsperpage']) ? $cfg['page']['cat_' . $c]['maxrowsperpage'] : $cfg['page']['cat___default']['maxrowsperpage'];
 list($pg, $d, $durl) = cot_import_pagenav('d', $maxrowsperpage); //page number for pages list
 list($pgc, $dc, $dcurl) = cot_import_pagenav('dc', $cfg['page']['maxlistsperpage']);// page number for cats list
-
 if ($c == 'all' || $c == 'system')
 {
 	list($usr['auth_read'], $usr['auth_write'], $usr['isadmin']) = cot_auth('admin', 'a');
@@ -172,6 +171,7 @@ if(empty($sql_page_string))
 		$where
 		ORDER BY $orderby LIMIT $d, ".$cfg['page']['maxrowsperpage'];
 }
+//cot_print($where);
 $totallines = $db->query($sql_page_count, $params)->fetchColumn();
 $sqllist = $db->query($sql_page_string, $params);
 
@@ -380,7 +380,6 @@ if(!$sqllist_rowset_other)
 		$t->parse('MAIN.LIST_ROW');
 	}
 }
-
 /* === Hook === */
 foreach (cot_getextplugins('page.list.tags') as $pl)
 {

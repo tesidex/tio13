@@ -34,6 +34,26 @@
 						<td>{PAGEEDIT_FORM_EXPIRE}</td>
 					</tr>
 					<tr>
+					     <td>Архитектура:</td>
+					     <td>{PAGEFORM_ARCHITECTURE_SELECT}</td>
+					</tr>
+					<tr>
+					     <td>Location:</td>
+					     <td>{PAGEFORM_LOCATION_SELECT}</td>
+					</tr>
+					<tr>
+					     <td>District:</td>
+					     <td>{PAGEFORM_DISTRICT_SELECT}</td>
+					</tr>
+					<tr>
+					     <td>Region:</td>
+					     <td>{PAGEFORM_REGION_SELECT}</td>
+					</tr>
+					<tr>
+					     <td>{PAGEEDIT_FORM_OBJECT_TYPE_TITLE}</td>
+					     <td>{PAGEEDIT_FORM_OBJECT_TYPE}</td>
+					</tr>					
+					<tr>
 						<td>{PHP.L.Status}:</td>
 						<td>{PAGEEDIT_FORM_LOCALSTATUS}</td>
 					</tr>

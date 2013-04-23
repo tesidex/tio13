@@ -6,7 +6,7 @@
 			<form action="{NEWEDIT_FORM_SEND}" enctype="multipart/form-data" method="post" name="newform">
 				<table class="cells">
 					<tr>
-						<td class="width30">{PHP.L.Category}:</td>
+						<td class="width30">{PHP.L.Category} :</td>
 						<td class="width70">{NEWEDIT_FORM_CAT}</td>
 					</tr>
 					<tr>

@@ -359,7 +359,7 @@
                 <p class="comments">(3) | <a href="#"> Комментировать</a></p>
             </article>
         </div>
-                <a class="more" href="#">Все блоги</a>
+                <a class="more" href=" #">Все блоги</a>
     </div>
 </div>
 </div>

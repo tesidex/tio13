@@ -40,7 +40,7 @@
       </div>
 
       <div class="span4 rightcol">
-        <h3>Contact Info</h3>
+        <h3>Contact Info </h3>
         <p>Put your e-mail, skype, phone numbers or any other contact information here so that your visitors could easily get in touch with you.</p>
       </div>
 

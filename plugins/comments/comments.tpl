@@ -9,10 +9,6 @@
             <td class="width80">{COMMENTS_POSTER}</td>
           </tr>
           <tr>
-            <td><b>{COMMENTS_IP_TITLE}:</b></td>
-            <td>{COMMENTS_IP}</td>
-          </tr>
-          <tr>
             <td><b>{COMMENTS_DATE_TITLE}:</b></td>
             <td>{COMMENTS_DATE}</td>
           </tr>
@@ -38,15 +34,14 @@
     <div style="display:{COMMENTS_DISPLAY}">
 <!-- BEGIN: COMMENTS_ROW -->
       <div class="row-fluid">
-        <div class="span2 hidden-phone">
-          <a href="{COMMENTS_ROW_AUTHOR_DETAILSLINK}">{COMMENTS_ROW_AUTHOR_AVATAR}</a>
-        </div>
-        <div class="span10">
-          <h4>
-            <a href="{COMMENTS_ROW_URL}" id="c{COMMENTS_ROW_ID}">{COMMENTS_ROW_ORDER}.</a> {COMMENTS_ROW_AUTHOR}
-            <span class="pull-right commentsdate">{COMMENTS_ROW_DATE}</span>
-          </h4>
-          <p>{COMMENTS_ROW_TEXT}</p>
+        <div class="span12 comment">
+            <h4>Комментарии:</h4>
+          <h5 class="marginbottom0"><span class="commentsdate">{COMMENTS_ROW_DATE}</span> - {COMMENTS_ROW_AUTHOR}</h5>
+          <p class="em">{COMMENTS_ROW_TEXT}</p>
+          <p class="blue">
+              <a href="#" class="pull-left paddingright10">Ответить</a>
+              <a href="#">Цитировать</a>
+          </p>
           <span class="commentsdate">{COMMENTS_ROW_ADMIN}{COMMENTS_ROW_EDIT}</span>
         </div>
       </div>

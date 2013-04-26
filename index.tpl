@@ -54,6 +54,9 @@
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
         </div>
     </div>
+    <div class="span8">
+	{INDEX_TAG_CLOUD}
+    </div>
 
     <div class="span8 IDX_news">
         <ul>
@@ -361,6 +364,7 @@
         </div>
                 <a class="more" href="#">Все блоги</a>
     </div>
+		{INDEX_NEWS}
 </div>
 </div>
 

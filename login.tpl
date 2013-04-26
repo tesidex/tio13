@@ -1,6 +1,6 @@
 <!-- BEGIN: MAIN -->
     <div class="row-fluid">
-      <div class="span8">
+      <div class="span12">
 
       <h2>{USERS_AUTH_TITLE}</h2>
       <form name="login" action="{USERS_AUTH_SEND}" method="post" class="form-horizontal">
@@ -39,10 +39,7 @@
 
       </div>
 
-      <div class="span4 rightcol">
-        <h3>Contact Info</h3>
-        <p>Put your e-mail, skype, phone numbers or any other contact information here so that your visitors could easily get in touch with you.</p>
-      </div>
+      
 
     </div>
 <!-- END: MAIN -->

@@ -16,7 +16,7 @@
                 <li><a href="#">Каталог агроусадеб Беларуси</a></li>
                 <li><a href="#">Дикая природа Беларуси</a></li>
                 <li><a href="#">Портал PHOTO.BY</a></li>
-                <li class="no-border"><a href="#">Авиабилеты</a></li>
+                <li><a href="#">Авиабилеты</a></li>
             </ul>
         </nav>
         <div class="margintop10">
@@ -26,7 +26,26 @@
             <img src="themes/{PHP.theme}/img/LEFT_banner2.jpg" alt="" width="240" height="200" />
         </div>
         <aside class="margintop10 popular">
-            <h2>Популярное</h2>
+            <h2 class="pull-left"><a href="#"><span>Популярное</span></a></h2>
+            <h2 class="pull-right inactive"><a href="#"><span>Обсуждаемое</span></a></h2>
+            <ul class="hidden">
+                <li>
+                    <p class="grey">13.06.2013</p>
+                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
+                </li>
+                <li>
+                    <p class="grey">13.06.2013</p>
+                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
+                </li>
+                <li>
+                    <p class="grey">13.06.2013</p>
+                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
+                </li>
+                <li>
+                    <p class="grey">13.06.2013</p>
+                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
+                </li>
+            </ul>
             <ul>
                 <li>
                     <p class="grey">13.06.2013</p>
@@ -40,7 +59,7 @@
                     <p class="grey">13.06.2013</p>
                     <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
                 </li>
-                <li class="no-border">
+                <li>
                     <p class="grey">13.06.2013</p>
                     <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
                 </li>
@@ -50,34 +69,42 @@
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
         </div>
     </div>
-    <div class="span8">
+    <article class="span8">
         <div class="span4">
             <!-- IF {PAGE_AVATAR} -->
-            <div class="hidden-phone">
-                <a href="{PAGE_URL}" class="thumbnail">
+            <div>
+                <a href="{PAGE_URL}">
                     <img src="./datas/photos/thumb_{PAGE_AVATAR}" alt="">
                 </a>
             </div>
             <!-- ENDIF -->
         </div>
         <div class="span4">
-            <p>{PAGE_DATE_STAMP|cot_date('d.m.Y', $this)} - <span class="breadcrumbs">{PAGE_TITLE}</span></p>
+            <p>{PAGE_DATE_STAMP|cot_date('d.m.Y', $this)} - <span class="breadcrumbs blue">{PAGE_TITLE}</span></p>
 
-            <h3>{PAGE_SHORTTITLE}</h3>
-            <!-- IF {PAGE_DESC} -->
-            <div class="newsdesc">{PAGE_DESC}</div>
-            <!-- ENDIF -->
+            <h2>{PAGE_SHORTTITLE}</h2>
+            <div class="PAGE_soc_buttons">
+                <p class="em">Поделиться:</p>
+                <span class='st_vkontakte' displayText=''></span>
+                <span class='st_facebook' displayText=''></span>
+                <span class='st_livejournal' displayText=''></span>
+                <span class='st_plusone' displayText=''></span>
+                <span class='st_twitter' displayText=''></span>
+                <span class='st_odnoklassniki' displayText=''></span>
+                <span class='st_mail_ru' displayText=''></span>
+                <span class='st_friendfeed' displayText=''></span>    
+            </div> 
         </div>
-    </div>
+        <div class="span8">
+            <!-- IF {PAGE_DESC} -->
+            <div class="strong marginbottom20">{PAGE_DESC}</div>
+            <!-- ENDIF -->
+            <p>{PAGE_TEXT}</p>
+
+            <p>{PAGE_COMMENTS_DISPLAY}</p>
+        </div>
+    </article>
     <div class="span8">
-        <p>{PAGE_TEXT}</p>
-
-        <p>{PAGE_COMMENTS_DISPLAY}</p>
-    </div>
-    <div class="span8">
-
-
-
         <!-- BEGIN: PAGE_ADMIN -->
         <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#admin-page-options">
             {PHP.L.Administration}&nbsp;&nbsp;&nbsp;<i class="icon-circle-arrow-down icon-white"></i>

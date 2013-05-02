@@ -36,18 +36,7 @@
             </div>
           </div>
           <hr />
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Begin}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_BEGIN}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Expire}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_EXPIRE}
-            </div>
-          </div>
+          
           <hr />
           <div class="control-group">
             <label class="control-label">{PHP.L.Alias}:</label>
@@ -59,6 +48,44 @@
             <label class="control-label">{PHP.L.Keywords}:</label>
             <div class="controls">
               {PAGEADD_FORM_KEYWORDS}
+            </div>
+          </div>
+            
+          <hr />
+          {PAGEADD_FORM_TEXT}
+          <!-- IF {PAGEADD_FORM_PFS} -->{PAGEADD_FORM_PFS}<!-- ENDIF -->
+          <!-- IF {PAGEADD_FORM_SFS} -->{PAGEADD_FORM_SFS}<!-- ENDIF -->
+          <hr />
+          <div class="control-group">
+            <label class="control-label">{PHP.L.page_file}:</label>
+            <div class="controls">
+              {PAGEADD_FORM_FILE} {PHP.L.page_filehint}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">{PHP.L.URL}:</label>
+            <div class="controls">
+              {PAGEADD_FORM_URL} &nbsp; {PAGEADD_FORM_PFS_URL_USER} &nbsp; {PAGEADD_FORM_PFS_URL_SITE}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">{PHP.L.Filesize}:</label>
+            <div class="controls">
+              {PAGEADD_FORM_SIZE} {PHP.L.page_filesizehint}
+            </div>
+          </div>
+            
+            <!-- IF {PHP.usr.maingrp} == 5 -->
+                  <div class="control-group">
+            <label class="control-label">{PHP.L.Begin}:</label>
+            <div class="controls">
+              {PAGEADD_FORM_BEGIN}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">{PHP.L.Expire}:</label>
+            <div class="controls">
+              {PAGEADD_FORM_EXPIRE}
             </div>
           </div>
             <!-- BEGIN: TAGS -->
@@ -83,29 +110,8 @@
               {PAGEADD_FORM_PARSER}
             </div>
           </div>
-          <hr />
-          {PAGEADD_FORM_TEXT}
-          <!-- IF {PAGEADD_FORM_PFS} -->{PAGEADD_FORM_PFS}<!-- ENDIF -->
-          <!-- IF {PAGEADD_FORM_SFS} -->{PAGEADD_FORM_SFS}<!-- ENDIF -->
-          <hr />
-          <div class="control-group">
-            <label class="control-label">{PHP.L.page_file}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_FILE} {PHP.L.page_filehint}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.URL}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_URL} &nbsp; {PAGEADD_FORM_PFS_URL_USER} &nbsp; {PAGEADD_FORM_PFS_URL_SITE}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Filesize}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_SIZE} {PHP.L.page_filesizehint}
-            </div>
-          </div>
+            <!-- ENDIF -->      
+            
           <!-- IF {PHP.usr_can_publish} -->
           <button type="submit" name="rpagestate" value="0" class="btn btn-success">{PHP.L.Publish}</button>&nbsp;
           <!-- ENDIF -->

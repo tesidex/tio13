@@ -11,12 +11,16 @@
     <div class="row-fluid">
     <!-- IF {LIST_ROW_AVATAR} -->
     <div class="span2">
-      <a href="{LIST_ROW_URL}" class="thumbnail">
-      <img src="./datas/photos/thumb_{LIST_ROW_AVATAR}" alt="">
-      </a>
+ <a href="{LIST_ROW_URL}" class="thumbnail">
+ <!-- IF {LIST_ROW_AVATAR|mb_strstr($this,'page_')} -->
+     <img src="./datas/photos/thumb_{LIST_ROW_AVATAR}" alt="">
+ <!-- ELSE -->
+ <img src="http://tio.by/uploads/fields_files/{LIST_ROW_AVATAR}" alt="">
+ <!-- ENDIF -->
+ </a>
     </div>
     <div class="span10">
-    <!-- ELSE -->
+     <!-- ELSE -->
     <div class="span12">
     <!-- ENDIF -->
       <h3><a href="{LIST_ROW_URL}">{LIST_ROW_SHORTTITLE}</a></h3>

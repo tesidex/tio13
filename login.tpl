@@ -23,7 +23,7 @@
         </div>
         <div class="control-group">
           <div class="controls">
-            <button type="submit" class="btn btn-primary" name="rlogin" value="0">{PHP.L.Login}</button>
+            <button type="submit" class="btn" name="rlogin" value="0">{PHP.L.Login}</button>
           </div>
         </div>
       </form>

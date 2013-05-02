@@ -37,31 +37,13 @@
             </div>
           </div>
           <hr />
-          <div class="control-group">
+          <div class="control-group editdate">
             <label class="control-label">{PHP.L.Date}:</label>
             <div class="controls">
               {PAGEEDIT_FORM_DATE}
             </div>
           </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Begin}:</label>
-            <div class="controls">
-              {PAGEEDIT_FORM_BEGIN}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Expire}:</label>
-            <div class="controls">
-              {PAGEEDIT_FORM_EXPIRE}
-            </div>
-          </div>
-          <hr />
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Status}:</label>
-            <div class="controls">
-              {PAGEEDIT_FORM_LOCALSTATUS}
-            </div>
-          </div>
+          
           <div class="control-group">
             <label class="control-label">{PHP.L.Alias}:</label>
             <div class="controls">
@@ -74,34 +56,7 @@
               {PAGEEDIT_FORM_KEYWORDS}
             </div>
           </div>
-            <!-- BEGIN: TAGS -->
-          <div class="control-group">
-            <label class="control-label">{PAGEEDIT_TOP_TAGS}:</label>
-            <div class="controls">
-              {PAGEEDIT_FORM_TAGS}<span class="help-inline">({PAGEEDIT_TOP_TAGS_HINT})</span>
-            </div>
-          </div>
-            <!-- END: TAGS -->
-          <!-- BEGIN: ADMIN -->
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Owner}:</label>
-            <div class="controls">
-              {PAGEEDIT_FORM_OWNERID}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Hits}:</label>
-            <div class="controls">
-              {PAGEEDIT_FORM_PAGECOUNT}
-            </div>
-          </div>
-          <!-- END: ADMIN -->
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Parser}:</label>
-            <div class="controls">
-              {PAGEEDIT_FORM_PARSER}
-            </div>
-          </div>
+            
           <hr />
           {PAGEEDIT_FORM_TEXT}
           <!-- IF {PAGEEDIT_FORM_PFS} -->{PAGEEDIT_FORM_PFS}<!-- ENDIF -->
@@ -137,11 +92,61 @@
               {PAGEEDIT_FORM_DELETE}
             </div>
           </div>
+            <!-- IF {PHP.usr.maingrp} == 5 -->
+            <div class="control-group">
+            <label class="control-label">{PHP.L.Begin}:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_BEGIN}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">{PHP.L.Expire}:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_EXPIRE}
+            </div>
+          </div>
+          <hr />
+          <div class="control-group">
+            <label class="control-label">{PHP.L.Status}:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_LOCALSTATUS}
+            </div>
+          </div>
+            <!-- BEGIN: TAGS -->
+          <div class="control-group">
+            <label class="control-label">{PAGEEDIT_TOP_TAGS}:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_TAGS}<span class="help-inline">({PAGEEDIT_TOP_TAGS_HINT})</span>
+            </div>
+          </div>
+            <!-- END: TAGS -->
+          <!-- BEGIN: ADMIN -->
+          <div class="control-group">
+            <label class="control-label">{PHP.L.Owner}:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_OWNERID}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">{PHP.L.Hits}:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_PAGECOUNT}
+            </div>
+          </div>
+          <!-- END: ADMIN -->
+          <div class="control-group">
+            <label class="control-label">{PHP.L.Parser}:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_PARSER}
+            </div>
+          </div>
+          <!-- ENDIF -->
           <!-- IF {PHP.usr_can_publish} -->
           <button type="submit" name="rpagestate" value="0" class="btn btn-success">{PHP.L.Publish}</button>&nbsp;
           <!-- ENDIF -->
           <button type="submit" name="rpagestate" value="2" class="btn">{PHP.L.Saveasdraft}</button>
           <button type="submit" name="rpagestate" value="1" class="btn">{PHP.L.Submitforapproval}</button>
+          
         </form>
       </div>
     </div>

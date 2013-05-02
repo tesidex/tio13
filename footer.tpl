@@ -1,16 +1,20 @@
 <!-- BEGIN: FOOTER -->
-
+</div>
 </div>
 <div class="FT_navigator">
     <div class="container">
-        <h3>Турнавигатор</h3>
-        <p>Вся история белорусского турбизнеса в газете «Туризм и отдых»   |   Горные лыжи   |   Калькулятор отдыха Экзотические направления   |   Самые оригинальные бани на белорусских агроусадьбах</p>
+        <div class="row">
+            <div class="span8 offset4_left ">
+                <h3>Турнавигатор</h3>
+                <p><a href="#">Вся история белорусского турбизнеса в газете «Туризм и отдых»</a>   |   <a href="#">Горные лыжи</a>   |   <a href="#">Калькулятор отдыха Экзотические направления</a>   |   <a href="#">Самые оригинальные бани на белорусских агроусадьбах</a></p>
+            </div>
+        </div>
     </div>
 </div>
 <footer>
     <div class="container">
-        <div class="span4_left"></div>
-        <div class="span7">
+        <div class="row">
+        <div class="span8 offset4_left">
             <ul>
                 <li><a href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">Реклама</a></li>
                 <li class="<!-- IF {PHP.m} == 'contact' OR {PHP.env.ext} == 'contact' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('contact')}">{PHP.L.blogster_contact}</a></li>
@@ -22,7 +26,7 @@
 
         </div>
 
-
+</div>
     </div>
 </footer>
 

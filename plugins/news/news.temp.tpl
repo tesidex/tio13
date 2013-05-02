@@ -4,7 +4,11 @@
       <!-- IF {PAGE_ROW_AVATAR} -->
       <div class="span3">
         <a href="{PAGE_ROW_URL}" class="thumbnail">
-          <img src="./datas/photos/thumb_{PAGE_ROW_AVATAR}" alt="">
+	<!-- IF {PAGE_ROW_AVATAR|mb_strstr($this,'page_')} -->
+	    <img src="./datas/photos/thumb_{PAGE_ROW_AVATAR}" alt="">
+	<!-- ELSE -->
+	<img src="http://tio.by/uploads/fields_files/{PAGE_ROW_AVATAR}" alt="">
+	<!-- ENDIF -->
         </a>
       </div>
       <div class="span9">

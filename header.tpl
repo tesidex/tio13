@@ -36,8 +36,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="span7 offset3">
-                        <nav>
+                    <div class="span6 offset4">
+                        <nav class="">
                             <ul class="nav1">
                                         <li><a href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">Реклама</a></li>
                                         <li class="<!-- IF {PHP.m} == 'contact' OR {PHP.env.ext} == 'contact' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('contact')}">{PHP.L.blogster_contact}</a></li>
@@ -48,10 +48,11 @@
                             </ul>
                         </nav>
                     </div>
-                                    <div class="span2">
-                                        <img class="soc_buttons" src="themes/{PHP.theme}/img/soc_buttons.png" alt="" width="87" height="20" />
-                                    </div>
+                        <div class="span2">
+                            <img class="soc_buttons" src="themes/{PHP.theme}/img/soc_buttons.png" alt="" width="87" height="20" />
+                        </div>
                     </div>
+                        </div>
                         <div class="row">
                             <div class="span4_left">
                                 <h1>
@@ -76,17 +77,17 @@
                                 </a>
                                 <div class="nav-collapse collapse">
                                     <ul class="nav">
-                                        <li class="<!-- IF {PHP.m} == 'index' OR {PHP.env.ext} == 'index' -->active<!-- ENDIF -->"><a href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">{PHP.L.Home}</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'index' OR {PHP.env.ext} == 'index' -->active<!-- ENDIF -->"><a href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">Главная</a></li>
                                         <li class="<!-- IF {PHP.m} == 'contact' OR {PHP.env.ext} == 'contact' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Газета</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'page' OR {PHP.env.ext} == 'page' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Для профи</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'page' OR {PHP.env.ext} == 'page' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=pro')}">Для профи</a></li>
                                         <li class="<!-- IF {PHP.m} == 'forums' OR {PHP.env.ext} == 'forums' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Наши проекты</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Поиск туров</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'page' OR {PHP.env.ext} == 'page' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=news')}">{PHP.L.News}</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'forums' OR {PHP.env.ext} == 'forums' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Фотогалерея</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Форум</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Блоги</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Справочник</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Выставки</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=vitrina-turov')}">Поиск туров</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'page' OR {PHP.env.ext} == 'page' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=news')}">Новости</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'forums' OR {PHP.env.ext} == 'forums' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Фотогалерея</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Форум</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Блоги</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Справочник</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Выставки</a></li>
                                     </ul>
                                     
                                         </div><!--/.nav-collapse -->

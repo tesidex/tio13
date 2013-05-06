@@ -30,6 +30,13 @@
             </div>
           </div>
           <div class="control-group">
+            <label class="control-label">{PAGEEDIT_FORM_BIGTEXT_TITLE}:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_BIGTEXT}
+<!--		<textarea maxlength="255" cols="64" rows="2" name="blabla" class="editor"></textarea>-->
+            </div>
+          </div>
+          <div class="control-group">
             <label class="control-label">{PAGEEDIT_FORM_AVATAR_TITLE}:</label>
             <div class="controls">
               {PAGEEDIT_FORM_AVATAR}

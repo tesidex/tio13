@@ -77,7 +77,7 @@
     <div class="span8">
         <div class="row">
             <div class="span8 IDX_news">
-                {INDEX_NEWSTIO}
+                {INDEX_BLOCK}
             </div>
         </div>
 
@@ -142,13 +142,13 @@
             <div class="span4">
                 <h2><a href="#">В Беларуси</a></h2>
                 <article>
-                    {INDEX_NEWSTIO_OBYAVLENIYA}
+                    {INDEX_BLOCK_OBYAVLENIYA}
                 </article>
             </div>
             <div class="span4">
                 <h2><a href="#">Турбизнес</a></h2>
                 <article>
-                    {INDEX_NEWSTIO_TURBIZNES}
+                    {INDEX_BLOCK_TURBIZNES}
                 </article>
 
             </div>
@@ -157,13 +157,13 @@
             <div class="span4">
                 <h2><a href="#">В мире</a></h2>
                 <article>
-                    {INDEX_NEWSTIO_TURBIZNES}
+                    {INDEX_BLOCK_TURBIZNES}
                 </article>
             </div>
             <div class="span4">
                 <h2><a href="#">Объявления</a></h2>
                 <article>
-                    {INDEX_NEWSTIO_OBYAVLENIYA}
+                    {INDEX_BLOCK_OBYAVLENIYA}
                 </article>
             </div>
         </div>
@@ -229,13 +229,13 @@
             <div class="span4">
                 <h2><a href="#">В Беларуси</a></h2>
                 <article>
-                    {INDEX_NEWSTIO_OBYAVLENIYA}
+                    {INDEX_BLOCK_OBYAVLENIYA}
                 </article>
             </div>
             <div class="span4">
                 <h2><a href="#">Турбизнес</a></h2>
                 <article>
-                    {INDEX_NEWSTIO_TURBIZNES}
+                    {INDEX_BLOCK_TURBIZNES}
                 </article>
 
             </div>
@@ -244,13 +244,13 @@
             <div class="span4">
                 <h2><a href="#">В мире</a></h2>
                 <article>
-                    {INDEX_NEWSTIO_TURBIZNES}
+                    {INDEX_BLOCK_TURBIZNES}
                 </article>
             </div>
             <div class="span4">
                 <h2><a href="#">Объявления</a></h2>
                 <article>
-                    {INDEX_NEWSTIO_OBYAVLENIYA}
+                    {INDEX_BLOCK_OBYAVLENIYA}
                 </article>
             </div>
         </div>
@@ -268,7 +268,7 @@
 
                
                     
-                        {INDEX_NEWS_BLOGS}
+                        {INDEX_BLOCK_BLOGS}
                     
                
                

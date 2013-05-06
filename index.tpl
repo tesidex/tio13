@@ -140,9 +140,9 @@
         </div>
         <div class="row IDX_blocks2 margintop10">
             <div class="span4">
-                <h2><a href="#">В Беларуси</a></h2>
+                <h2><a href="#">Новости</a></h2>
                 <article>
-                    {INDEX_BLOCK_OBYAVLENIYA}
+                    {INDEX_BLOCK_NOVOSTI}
                 </article>
             </div>
             <div class="span4">
@@ -155,9 +155,9 @@
         </div>
         <div class="row IDX_blocks2 margintop10">
             <div class="span4">
-                <h2><a href="#">В мире</a></h2>
+                <h2><a href="#">Витрина туров</a></h2>
                 <article>
-                    {INDEX_BLOCK_TURBIZNES}
+                    {INDEX_BLOCK_VITRINA_TUROV}
                 </article>
             </div>
             <div class="span4">
@@ -227,9 +227,9 @@
 
         <div class="row IDX_blocks2 margintop10">
             <div class="span4">
-                <h2><a href="#">В Беларуси</a></h2>
+                <h2><a href="#">Новости</a></h2>
                 <article>
-                    {INDEX_BLOCK_OBYAVLENIYA}
+                    {INDEX_BLOCK_NOVOSTI}
                 </article>
             </div>
             <div class="span4">
@@ -242,9 +242,9 @@
         </div>
         <div class="row IDX_blocks2 margintop10">
             <div class="span4">
-                <h2><a href="#">В мире</a></h2>
+                <h2><a href="#">Витрина туров</a></h2>
                 <article>
-                    {INDEX_BLOCK_TURBIZNES}
+                    {INDEX_BLOCK_VITRINA_TUROV}
                 </article>
             </div>
             <div class="span4">
@@ -265,12 +265,8 @@
                 <div class="span8">
                     <h2><a href="/blogs">Блоги</a></h2>
                 </div>
-
-               
                     
                         {INDEX_BLOCK_BLOGS}
-                    
-               
                
                 <a class="more" href="#">Все блоги</a>
            

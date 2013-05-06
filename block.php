@@ -22,16 +22,16 @@ require_once cot_incfile('page', 'module');
 require_once cot_incfile('new', 'module');
 require_once cot_langfile('block', 'plug');
 
-list($pg, $d, $durl) = cot_import_pagenav('d',
-	$cfg['plugin']['block']['maxpages']);
+list($pg, $d, $durl) = cot_import_pagenav('d',	$cfg['plugin']['block']['maxpages']);
 $c = cot_import('c', 'G', 'TXT');
 $c = (!isset($structure['page'][$c])) ? '' : $c;
 
 $cfg['plugin']['block']['category'] = 'blogs|4|150,newspaper|4|150';
-
 $categories = explode(',', $cfg['plugin']['block']['category']);
 $jj = 0;
 $cats = array();
+
+
 foreach ($categories as $v) {
     $v = explode('|', trim($v));
     if (isset($structure['page'][$v[0]])) {
@@ -182,13 +182,13 @@ foreach ($cats as $k => $v) {
 	    $block_html);
     $catn++;
 }
-unset($c);
 
-$cfg['plugin']['block']['category'] = 'turbiznes|4|150,obyavleniya|4|150';
+$cfg['plugin']['block']['category'] = 'otzyvy|4|150,vitrina-turov|4|150,novosti|4|150,turbiznes|4|150,obyavleniya|4|150';
 $categories = explode(',', $cfg['plugin']['block']['category']);
-$catn = 1;
+$catn = 0; // 0 для самых главных новостей сверху
 $jj = 0;
 $cats = array();
+unset($c);
 
 foreach ($categories as $v) {
     $v = explode('|', trim($v));
@@ -208,7 +208,7 @@ foreach ($categories as $v) {
 	$jj++;
     }
 }
-
+//cot_print($cats);
 foreach ($cats as $k => $v) {
     $cat = ($catn == 0) ? $c : $v[0];
     $tagname = str_replace(array(' ', ',', '.', '-'), '_', strtoupper($v[0]));
@@ -227,7 +227,9 @@ foreach ($cats as $k => $v) {
     $catsub = cot_structure_children('new', $cat);
     $where = "new_state = 0 AND new_cat <> 'system' AND new_begin <= {$sys['now']} AND (new_expire = 0 OR new_expire > {$sys['now']}) AND new_cat IN ('" . implode("','",
 		    $catsub) . "')";
-//		cot_print($where);
+		
+    //TODO добавить в where "is_main" для $catn=0
+
     $block_link_params = ($c != $indexcat) ? "c=" . $c : '';
     $block_join_columns = '';
     $block_join_tables = '';

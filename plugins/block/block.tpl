@@ -1,30 +1,15 @@
 <!-- BEGIN: BLOCK -->
 
-<ul id="myTab" class="nav-tabs">
-sdfgsdfg
-    <!-- BEGIN: PAGE_ROW -->
-    <li>
-        <h3><a data-toggle="tab" href="#{PAGE_ROW_URL}" title="{PAGE_ROW_SHORTTITLE}">{PAGE_ROW_SHORTTITLE}</a></h3>
+<!-- BEGIN: PAGE_ROW -->
 
-<div class="tab-content">
+<section class="row-fluid">
+    <div class="span12">
+        <p class="newsdetails pull-left margin0 paddingright10">{PAGE_ROW_DATE_STAMP|cot_date('d.m.Y', $this)}</p>
+        <h3 class="jscut"><a href="{PAGE_ROW_URL}" title="{PAGE_ROW_SHORTTITLE}">{PAGE_ROW_SHORTTITLE}</a></h3>
+        <p>{PAGE_ROW_TEXT_CUT}</p>
+    </div>
+</section>
 
-<!--    <div class="row">
-        <div class="span12">
-            <div class="tab-pane" id="{PAGE_ROW_URL}">{PAGE_ROW_TEXT}</div>
-        </div>
-    </div>-->
-</div>
-    </li>
-
-    <!-- END: PAGE_ROW -->
-
-</ul>
-<script>
-//  $('#myTab a').click(function (e) {
-//  e.preventDefault();
-//  $(this).tab('show');
-//})
-</script>
-
+<!-- END: PAGE_ROW -->
 
 <!-- END: BLOCK -->

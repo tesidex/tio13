@@ -444,4 +444,3 @@ foreach ($cats as $k => $v) {
 	    $block_html);
     $catn++;
 }
-

@@ -1,4 +1,6 @@
-<?php defined('COT_CODE') or die('Wrong URL');
+<?php
+
+defined('COT_CODE') or die('Wrong URL');
 
 /* ====================
   [BEGIN_COT_EXT]
@@ -16,13 +18,12 @@
  * @copyright Copyright (c) tesidex 2008-2013
  * @license BSD
  */
-
-
 require_once cot_incfile('page', 'module');
 require_once cot_incfile('new', 'module');
 require_once cot_langfile('block', 'plug');
 
-list($pg, $d, $durl) = cot_import_pagenav('d',	$cfg['plugin']['block']['maxpages']);
+list($pg, $d, $durl) = cot_import_pagenav('d',
+	$cfg['plugin']['block']['maxpages']);
 $c = cot_import('c', 'G', 'TXT');
 $c = (!isset($structure['page'][$c])) ? '' : $c;
 
@@ -183,9 +184,13 @@ foreach ($cats as $k => $v) {
     $catn++;
 }
 
+// ==========================================================
+
+
+
 $cfg['plugin']['block']['category'] = 'otzyvy|4|150,vitrina-turov|4|150,novosti|4|150,turbiznes|4|150,obyavleniya|4|150';
 $categories = explode(',', $cfg['plugin']['block']['category']);
-$catn = 0; // 0 для самых главных новостей сверху
+$catn = 1; // 0 для самых главных новостей сверху
 $jj = 0;
 $cats = array();
 unset($c);
@@ -227,8 +232,6 @@ foreach ($cats as $k => $v) {
     $catsub = cot_structure_children('new', $cat);
     $where = "new_state = 0 AND new_cat <> 'system' AND new_begin <= {$sys['now']} AND (new_expire = 0 OR new_expire > {$sys['now']}) AND new_cat IN ('" . implode("','",
 		    $catsub) . "')";
-		
-    //TODO добавить в where "is_main" для $catn=0
 
     $block_link_params = ($c != $indexcat) ? "c=" . $c : '';
     $block_join_columns = '';
@@ -329,3 +332,116 @@ foreach ($cats as $k => $v) {
 	    $block_html);
     $catn++;
 }
+
+
+// ==========================================================
+
+
+$catn = 1; // 0 для самых главных новостей сверху
+$jj = 0;
+$cats = array(
+    'novosti' =>
+    array(
+	0 => 'novosti',
+	1 => '4',
+	2 => '150',
+	3 => array(
+	    'durl' => null,
+	    'd' => (int) 0,
+	    'pg' => (int) 1)
+    )
+);
+unset($c);
+
+//cot_print($cats);
+foreach ($cats as $k => $v) {
+    $cat = $v[0];
+//    cot_print($v[0]);
+
+    $tagname = 'TABS';
+    // Cache for guests
+    if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
+	$block_cache_id = "$theme.$lang.$cat." . $v[3]['d']; // Includes theme, lang, category and current page
+	$block_html = $cache->disk->get($block_cache_id, 'block',
+		(int) $cfg['plugin']['block']['cache_ttl']);
+	if (!is_null($block_html)) {
+	    $t->assign('INDEX_BLOCK_' . $tagname, $block_html);
+	    continue;
+	}
+    }
+
+    $catsub = cot_structure_children('new', $cat);
+    $where = "new_state = 0 AND new_cat <> 'system' AND new_begin <= {$sys['now']} AND (new_expire = 0 OR new_expire > {$sys['now']}) AND new_cat IN ('" . implode("','",
+		    $catsub) . "')";
+    //TODO добавить в where "is_main" для $catn=0
+
+    $block_link_params = ($c != $indexcat) ? "c=" . $c : '';
+    $block_join_columns = '';
+    $block_join_tables = '';
+
+    $sql = $db->query("SELECT p.*, u.* $block_join_columns
+			FROM $db_news AS p LEFT JOIN $db_users AS u ON u.user_id=p.new_ownerid $block_join_tables
+			WHERE $where ORDER BY new_date DESC LIMIT " . $v[3]['d'] . ", " . $v[1]);
+    $totalblock = $db->query("SELECT COUNT(*)
+			FROM $db_news AS p $block_join_tables WHERE " . $where)->fetchColumn();
+
+    if ($v[3]['d'] < 0 || $totalblock > 0 && $v[3]['d'] > $totalblock) {
+	cot_die_message(404);
+    }
+
+    if (!$cfg['plugin']['block']['syncpagination']) {
+	$block_link_params .= ($catn != 0 && $d != 0) ? '&d=' . $durl : '';
+	$xx = 0;
+	foreach ($cats as $key => $var) {
+	    $block_link_params .= (($key != $cat) && $var[3] != 0 && $xx != 0) ? "&" . $key . "d=" . $var[3]['durl']
+			: '';
+	    $xx++;
+	}
+    }
+
+    $block_link = cot_url('index', $block_link_params);
+    $catd = ($catn != 0 && !$cfg['plugin']['block']['syncpagination']) ? $cat . "d"
+		: "d";
+    $pagenav = cot_pagenav('index', $block_link_params, $v[3]['d'], $totalblock,
+	    $v[1], $catd);
+    $filename = str_replace(array(' ', ',', '.', '-'), '_', $v[0]);
+    $block = new XTemplate(cot_tplfile("block.tabs",'plug'));
+    $sql_rowset = $sql->fetchAll();
+    $jj = 0;
+
+    foreach ($sql_rowset as $pag) {
+	$jj++;
+	$url = cot_url('index', 'c=' . $pag['new_cat']);
+	$block->assign(cot_generate_newtags($pag, 'PAGE_ROW_', $v[2]));
+	$block->assign(array(
+	    'PAGE_ROW_BLOCKPATH' => cot_rc_link($url,
+		    htmlspecialchars($structure['new'][$row['new_cat']]['title'])),
+	    'PAGE_ROW_BLOCKPATH_URL' => $url,
+	    'PAGE_ROW_CATDESC' => htmlspecialchars($structure['new'][$pag['new_cat']]['desc']),
+	    'PAGE_ROW_OWNER' => cot_build_user($pag['new_ownerid'],
+		    htmlspecialchars($pag['user_name'])),
+	    'PAGE_ROW_ODDEVEN' => cot_build_oddeven($jj),
+	    'PAGE_ROW_NUM' => $jj
+	));
+	$block->assign(cot_generate_usertags($pag, 'PAGE_ROW_OWNER_'));
+
+	$block->parse('BLOCK.PAGE_ROW');
+
+
+	$block->assign(cot_generate_newtags($pag, 'TABS_ROW_', $v[2]));
+	$block->parse('BLOCK.TABS_ROW');
+    }
+
+//    cot_print($block);
+
+    $block->parse('BLOCK');
+    $block_html = $block->text('BLOCK');
+    // Cache for guests
+    if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
+	$cache->disk->store($block_cache_id, $block_html, 'block');
+    }
+    $t->assign(($catn == 0) ? 'INDEX_BLOCK' : 'INDEX_BLOCK_' . $tagname,
+	    $block_html);
+    $catn++;
+}
+

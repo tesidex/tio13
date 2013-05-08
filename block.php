@@ -64,7 +64,6 @@ $catn = 1;
 
 foreach ($cats as $k => $v) {
     $cat = ($catn == 0) ? $c : $v[0];
-//				cot_print($cat);
 
     $tagname = str_replace(array(' ', ',', '.', '-'), '_', strtoupper($v[0]));
 
@@ -190,7 +189,7 @@ foreach ($cats as $k => $v) {
 
 $cfg['plugin']['block']['category'] = 'otzyvy|4|150,vitrina-turov|4|150,novosti|4|150,turbiznes|4|150,obyavleniya|4|150';
 $categories = explode(',', $cfg['plugin']['block']['category']);
-$catn = 1; // 0 для самых главных новостей сверху
+$catn = 1; 
 $jj = 0;
 $cats = array();
 unset($c);
@@ -373,7 +372,7 @@ foreach ($cats as $k => $v) {
     $catsub = cot_structure_children('new', $cat);
     $where = "new_state = 0 AND new_cat <> 'system' AND new_begin <= {$sys['now']} AND (new_expire = 0 OR new_expire > {$sys['now']}) AND new_cat IN ('" . implode("','",
 		    $catsub) . "')";
-    //TODO добавить в where "is_main" для $catn=0
+    //TODO добавить в where "is_main" 
 
     $block_link_params = ($c != $indexcat) ? "c=" . $c : '';
     $block_join_columns = '';

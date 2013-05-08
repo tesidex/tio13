@@ -51,6 +51,22 @@
         </div>
     </div>
       <div class="span8">
+          <!-- BEGIN: PAGE_ADMIN -->
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#admin-page-options">
+            {PHP.L.Administration}&nbsp;&nbsp;&nbsp;<i class="icon-circle-arrow-down icon-white"></i>
+          </button>
+          <div id="admin-page-options" class="collapse" style="margin-bottom: 10px;">
+            <ul class="unstyled">
+              <!-- IF {PHP.usr.isadmin} -->
+              <li><a href="{PHP|cot_url('admin')}">{PHP.L.Adminpanel}</a></li>
+              <!-- ENDIF -->
+              <li><a href="{PAGE_CAT|cot_url('page','m=add&c=$this')}">{PHP.L.page_addtitle}</a></li>
+              <li>{PAGE_ADMIN_UNVALIDATE}</li>
+              <li>{PAGE_ADMIN_EDIT}</li>
+              <li>{PAGE_ADMIN_DELETE}</li>
+            </ul>
+          </div>
+        <!-- END: PAGE_ADMIN -->
         <span class="breadcrumbs">{PAGE_TITLE}</span>
         <h3>{PAGE_SHORTTITLE}</h3>
           <!-- IF {PAGE_DESC} -->
@@ -100,22 +116,7 @@
           </ul>
           <hr />
         <!-- END: PAGE_FILE -->
-        <!-- BEGIN: PAGE_ADMIN -->
-          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#admin-page-options">
-            {PHP.L.Administration}&nbsp;&nbsp;&nbsp;<i class="icon-circle-arrow-down icon-white"></i>
-          </button>
-          <div id="admin-page-options" class="collapse" style="margin-bottom: 10px;">
-            <ul class="unstyled">
-              <!-- IF {PHP.usr.isadmin} -->
-              <li><a href="{PHP|cot_url('admin')}">{PHP.L.Adminpanel}</a></li>
-              <!-- ENDIF -->
-              <li><a href="{PAGE_CAT|cot_url('page','m=add&c=$this')}">{PHP.L.page_addtitle}</a></li>
-              <li>{PAGE_ADMIN_UNVALIDATE}</li>
-              <li>{PAGE_ADMIN_EDIT}</li>
-              <li>{PAGE_ADMIN_DELETE}</li>
-            </ul>
-          </div>
-        <!-- END: PAGE_ADMIN -->
+        
         <!-- BEGIN: PAGE_MULTI -->
           <h3>{PHP.L.Summary}:</h3>
           {PAGE_MULTI_TABTITLES}

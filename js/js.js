@@ -1,3 +1,4 @@
 $(document).ready(function() {
-    // Put your awesome code here!
+//    $('#myTab a[href="#popular"]').tab('show');
+//    $('#myTab a[href="#discuss"]').tab('show');
 });

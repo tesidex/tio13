@@ -1,7 +1,7 @@
 <!-- BEGIN: MAIN -->
 <script type="text/javascript">
-    var element = document.getElementById("home");
-    element.className = element.className + "active";
+//    var element = document.getElementById("home");
+//    element.className = element.className + "active";
 </script>
 <div class="row margintop10">
     <div class="span4_left">
@@ -30,44 +30,22 @@
             <img src="themes/{PHP.theme}/img/LEFT_banner2.jpg" alt="" width="240" height="200" />
         </div>
         <aside class="margintop10 popular">
-            <h2 class="pull-left"><a href="#"><span>Популярное</span></a></h2>
-            <h2 class="pull-right inactive"><a href="#"><span>Обсуждаемое</span></a></h2>
-            <ul class="hidden">
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-            </ul>
+            <div class="nav-tabs" id="">
+                <h2 class="pull-left"><a href="#popular" data-toggle="tab"><span>Популярное</span></a></h2>
+                <h2 class="pull-right"><a href="#discuss" data-toggle="tab"><span>Обсуждаемое</span></a></h2>
+            </div>
+            <div class="tab-content">
+                <ul class="tab-pane active" id="popular">
+                    <li>
+                        <p>{INDEX_BLOCK_TURBIZNES}</p>
+                    </li>
+               </ul>
+                <ul class="tab-pane" id="discuss">
+                    <li>
+                        <p>{INDEX_BLOCK_NOVOSTI}</p>
+                    </li>
+               </ul>
+            </div>
         </aside>
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
@@ -84,10 +62,10 @@
         <div class="row">
             <div class="span8">
                 <article class="IDX_article">
-            <img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_article.jpg" alt="" width="250" height="188" />
-            <p class="date">14.03.2013</p>
-            <p>Говоря о визах, члены правления (на заседании присутствовали директора компаний «Топ-Тур», «Экотур-6», «Сакуб», «Бел-Ориентир», «АлатанТур», «СМОК Травэл») отметили проблему электронного бронирования на сайтах некоторых консульств. С вопросом о сложностях с регистрацией анкет на сайтах было решено обратиться в МИД. Также руководители турфирм предложили рассмотреть возможность открывать «европейские» визы через посольства Латвии и Эстонии. Этот вопрос стоит детально проработать с представителями посольств...</p>
-            <a href="#" class="btn">Читать далее</a>
+                    <img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_article.jpg" alt="" width="250" height="188" />
+                    <p class="date">14.03.2013</p>
+                    <p>Говоря о визах, члены правления (на заседании присутствовали директора компаний «Топ-Тур», «Экотур-6», «Сакуб», «Бел-Ориентир», «АлатанТур», «СМОК Травэл») отметили проблему электронного бронирования на сайтах некоторых консульств. С вопросом о сложностях с регистрацией анкет на сайтах было решено обратиться в МИД. Также руководители турфирм предложили рассмотреть возможность открывать «европейские» визы через посольства Латвии и Эстонии. Этот вопрос стоит детально проработать с представителями посольств...</p>
+                    <a href="#" class="btn">Читать далее</a>
                 </article>
             </div>
         </div>
@@ -140,13 +118,13 @@
         </div>
         <div class="row IDX_blocks2 margintop10">
             <div class="span4">
-                <h2><a href="#">Новости</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=novosti')}">Новости</a></h2>
                 <article>
                     {INDEX_BLOCK_NOVOSTI}
                 </article>
             </div>
             <div class="span4">
-                <h2><a href="#">Турбизнес</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=turbiznes')}">Турбизнес</a></h2>
                 <article>
                     {INDEX_BLOCK_TURBIZNES}
                 </article>
@@ -155,13 +133,13 @@
         </div>
         <div class="row IDX_blocks2 margintop10">
             <div class="span4">
-                <h2><a href="#">Витрина туров</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=vitrina-turov')}">Витрина туров</a></h2>
                 <article>
                     {INDEX_BLOCK_VITRINA_TUROV}
                 </article>
             </div>
             <div class="span4">
-                <h2><a href="#">Объявления</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=obyavleniya')}">Объявления</a></h2>
                 <article>
                     {INDEX_BLOCK_OBYAVLENIYA}
                 </article>
@@ -175,18 +153,9 @@
         <div class="row">
             <div class="span8 IDX_blocks2">
 
-                <h2><a href="#">Газета "Туризм и отдых"</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=newspaper')}">Газета "Туризм и отдых"</a></h2>
                 <article>
-                    <img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block4.jpg" alt="" width="162" height="132" />
-                    <p class="grey small margin0">14.03.2013</p>
-                    <h3 class="under">Фотография как двигатель туризма</h3>
-                    <p>Быть путешественником – значит шагать по свету с широко открытыми глазами и… фотоаппаратом наперевес. Серьезно, все без исключения туристы сегодня в той или иной степени еще непременно и фотографы: а как иначе делиться увиденным и пережитым в путешествии, если не при помощи фотографий?! Головокружительными закатами, буддистскими храмами в розоватой рассветной дымке, одногорбым верблюдом – ленивым «кораблем пустыни», пляшущими на океанской глади солнечными бликами… А может быть, и драматическими моментами экстремальных путешествий – опасных восхождений по отвесным скалам, сплавов по бурным рекам, сложных подъемов по горным перевалам.</p>
-                </article>
-                <article>
-                    <img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block4.jpg" alt="" width="162" height="132" />
-                    <p class="grey small margin0">14.03.2013</p>
-                    <h3 class="under">Фотография как двигатель туризма</h3>
-                    <p>Быть путешественником – значит шагать по свету с широко открытыми глазами и… фотоаппаратом наперевес. Серьезно, все без исключения туристы сегодня в той или иной степени еще непременно и фотографы: а как иначе делиться увиденным и пережитым в путешествии, если не при помощи фотографий?! Головокружительными закатами, буддистскими храмами в розоватой рассветной дымке, одногорбым верблюдом – ленивым «кораблем пустыни», пляшущими на океанской глади солнечными бликами… А может быть, и драматическими моментами экстремальных путешествий – опасных восхождений по отвесным скалам, сплавов по бурным рекам, сложных подъемов по горным перевалам.</p>
+                    {INDEX_BLOCK_NEWSPAPER}
                 </article>
             </div>
         </div>
@@ -227,13 +196,13 @@
 
         <div class="row IDX_blocks2 margintop10">
             <div class="span4">
-                <h2><a href="#">Новости</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=novosti')}">Новости</a></h2>
                 <article>
                     {INDEX_BLOCK_NOVOSTI}
                 </article>
             </div>
             <div class="span4">
-                <h2><a href="#">Турбизнес</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=turbiznes')}">Турбизнес</a></h2>
                 <article>
                     {INDEX_BLOCK_TURBIZNES}
                 </article>
@@ -242,34 +211,34 @@
         </div>
         <div class="row IDX_blocks2 margintop10">
             <div class="span4">
-                <h2><a href="#">Витрина туров</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=vitrina-turov')}">Витрина туров</a></h2>
                 <article>
                     {INDEX_BLOCK_VITRINA_TUROV}
                 </article>
             </div>
             <div class="span4">
-                <h2><a href="#">Объявления</a></h2>
+                <h2><a href="{PHP|cot_url('new', 'c=obyavleniya')}">Объявления</a></h2>
                 <article>
                     {INDEX_BLOCK_OBYAVLENIYA}
                 </article>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="span8">
                 <img class="pull-left margintop10" src="themes/{PHP.theme}/img/IDX_banner1.jpg" alt="" width="710" height="88" />
             </div>
         </div>
         <div class="row IDX_blog">
-            
-                <div class="span8">
-                    <h2><a href="/blogs">Блоги</a></h2>
-                </div>
-                    
-                        {INDEX_BLOCK_BLOGS}
-               
-                <a class="more" href="#">Все блоги</a>
-           
+
+            <div class="span8">
+                <h2><a href="/blogs">Блоги</a></h2>
+            </div>
+
+            {INDEX_BLOCK_BLOGS}
+
+            <div class="span8"><a class="more" href="{PHP|cot_url('new', 'c=blogs')}">Все блоги</a></div>
+
         </div>
     </div>
 </div>

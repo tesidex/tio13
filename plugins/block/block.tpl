@@ -1,14 +1,30 @@
 <!-- BEGIN: BLOCK -->
 
-<ul id="news_tabs">
+<ul id="myTab" class="nav-tabs">
 
     <!-- BEGIN: PAGE_ROW -->
     <li>
-	<h3><a href="{PAGE_ROW_URL}" title="{PAGE_ROW_SHORTTITLE}">{PHP.pag.new_title|mb_substr($this, 0, 80)}</a></h3>
-	<!-- IF {PHP.usr.isadmin} --><p>[{PAGE_ROW_ADMIN_EDIT}]</p><!-- ENDIF -->
+        <h3><a data-toggle="tab" href="#{PAGE_ROW_URL}" title="{PAGE_ROW_SHORTTITLE}">{PAGE_ROW_SHORTTITLE}</a></h3>
 
+<div class="tab-content">
+
+<!--    <div class="row">
+        <div class="span12">
+            <div class="tab-pane" id="{PAGE_ROW_URL}">{PAGE_ROW_TEXT}</div>
+        </div>
+    </div>-->
+</div>
     </li>
+
     <!-- END: PAGE_ROW -->
 
 </ul>
+<script>
+//  $('#myTab a').click(function (e) {
+//  e.preventDefault();
+//  $(this).tab('show');
+//})
+</script>
+
+
 <!-- END: BLOCK -->

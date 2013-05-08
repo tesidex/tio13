@@ -14,8 +14,8 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-        <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic&subset=latin-ext,latin,cyrillic' rel='stylesheet' type='text/css'>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -40,7 +40,7 @@
                         <nav class="">
                             <ul class="nav1">
                                         <li><a href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">Реклама</a></li>
-                                        <li class="<!-- IF {PHP.m} == 'contact' OR {PHP.env.ext} == 'contact' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('contact')}">{PHP.L.blogster_contact}</a></li>
+                                        <li class="<!-- IF {PHP.m} == 'contact' OR {PHP.env.ext} == 'contact' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('contact')}">Контакты</a></li>
                                         <li class="<!-- IF {PHP.m} == 'page' OR {PHP.env.ext} == 'page' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=aboutus')}">О редакции</a></li>
                                         <li class="<!-- IF {PHP.m} == 'forums' OR {PHP.env.ext} == 'forums' -->active<!-- ENDIF -->"><a href="#">Партнеры</a></li>
                                         <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('login')}">Вход</a></li>

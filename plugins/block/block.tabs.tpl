@@ -36,7 +36,7 @@
 		<p>{PAGE_ROW_TEXT_CUT}</p>
 		<p>{PAGE_ROW_OWNER_ID}</p>{PAGE_ROW_URL}
 		<p>{PAGE_ROW_AUTHOR}</p>
-		<a href="#" class="btn">Читать далее</a>
+                <a href="{PAGE_ROW_URL}" class="btn">Читать далее</a>
 	    </div>
 
 	    <!-- END: PAGE_ROW -->

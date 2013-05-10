@@ -29,7 +29,31 @@
 						<td>{PHP.L.new_metakeywords}:</td>
 						<td>{NEWADD_FORM_KEYWORDS}</td>
 					</tr>
+					
 					<tr>
+						<td colspan="2">
+							{NEWADD_FORM_TEXT}
+							<!-- IF {NEWADD_FORM_PFS} -->{NEWADD_FORM_PFS}<!-- ENDIF -->
+							<!-- IF {NEWADD_FORM_SFS} --><span class="spaced">{PHP.cfg.separator}</span>{NEWADD_FORM_SFS}<!-- ENDIF -->
+						</td>
+					</tr>
+					<tr>
+						<td>{PHP.L.new_file}:</td>
+						<td>
+							{NEWADD_FORM_FILE}
+							<p>{PHP.L.new_filehint}</p>
+						</td>
+					</tr>
+					<tr>
+						<td>{PHP.L.URL}:<br />{PHP.L.new_urlhint}</td>
+						<td>{NEWADD_FORM_URL}<br />{NEWADD_FORM_URL_PFS} &nbsp; {NEWADD_FORM_URL_SFS}</td>
+					</tr>
+					<tr>
+						<td>{PHP.L.Filesize}:<br />{PHP.L.new_filesizehint}</td>
+						<td>{NEWADD_FORM_SIZE}</td>
+					</tr>
+                                        <!-- IF {PHP.usr.maingrp} == 5 -->
+                                            <tr>
 						<td>{PHP.L.new_metatitle}:</td>
 						<td>{NEWADD_FORM_METATITLE}</td>
 					</tr>
@@ -59,28 +83,7 @@
 						<td>{PHP.L.Parser}:</td>
 						<td>{NEWADD_FORM_PARSER}</td>
 					</tr>
-					<tr>
-						<td colspan="2">
-							{NEWADD_FORM_TEXT}
-							<!-- IF {NEWADD_FORM_PFS} -->{NEWADD_FORM_PFS}<!-- ENDIF -->
-							<!-- IF {NEWADD_FORM_SFS} --><span class="spaced">{PHP.cfg.separator}</span>{NEWADD_FORM_SFS}<!-- ENDIF -->
-						</td>
-					</tr>
-					<tr>
-						<td>{PHP.L.new_file}:</td>
-						<td>
-							{NEWADD_FORM_FILE}
-							<p>{PHP.L.new_filehint}</p>
-						</td>
-					</tr>
-					<tr>
-						<td>{PHP.L.URL}:<br />{PHP.L.new_urlhint}</td>
-						<td>{NEWADD_FORM_URL}<br />{NEWADD_FORM_URL_PFS} &nbsp; {NEWADD_FORM_URL_SFS}</td>
-					</tr>
-					<tr>
-						<td>{PHP.L.Filesize}:<br />{PHP.L.new_filesizehint}</td>
-						<td>{NEWADD_FORM_SIZE}</td>
-					</tr>
+                                        <!-- ENDIF -->
 					<tr>
 						<td colspan="2" class="valid">
 							<!-- IF {PHP.usr_can_publish} -->

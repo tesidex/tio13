@@ -17,7 +17,7 @@ h5 a { color: #1A3A75; }
 
 /* 1. Header
 -------------------------------------------------- */
-.header { background: #ffffff; }
+header { background: #ffffff; }
 
 .yourlogo {
   color: #f2f2f2;
@@ -82,14 +82,14 @@ nav {
 .popular        { background: #626262; width: 100%; color: #fff; }
 .popular h2     { font-size: 12px; width: auto; margin: 0; padding: 10px; }
 .popular h2 a   { color: #fff; text-transform: uppercase; }
-.popular h2 a:hover { text-decoration: none; }
-.popular ul     { list-style: none; padding: 0px; margin: 0; }
-.popular li section    { border-bottom: 1px solid #b2b2b2; padding: 7px; }
+.popular h2 a:hover     { text-decoration: none; }
+.popular ul             { list-style: none; padding: 0px; margin: 0; }
+.popular li section     { border-bottom: 1px solid #b2b2b2; padding: 7px; }
 .popular li section:last-child    { border: none !important; }
-.tab-pane h3    { display: none; }
-.tab-pane a     { color: #fff; font-weight: normal; line-height: 1em; }
-.tab-pane a:hover  { text-decoration: none; color: #fff; }
-.tab-pane p     { clear: both; }
+#TABS1 > ul > li> h3        { display: none; }
+#TABS1 > .tab-pane a        { color: #fff; font-weight: normal; line-height: 1em; }
+#TABS1 > .tab-pane a:hover  { text-decoration: none; color: #fff; }
+#TABS1 > .tab-pane p        { clear: both; }
 
 .IDX_news ul    { background: #f7f7f7; min-height: 80px; display: block; margin: 0; width: 100%; }
 .IDX_news li         {
@@ -115,15 +115,14 @@ nav {
    position: absolute;
    top: 100%;
    left: 49%;
-   border-top: 6px solid transparent; /* граница сверху элемента */
-   border-top-color: inherit; /* наследуем значение родительского элемента */
-   border-left: 6px solid transparent; /* левая граница элемента */
+   border-top: 6px solid transparent; 
+   border-top-color: inherit; 
+   border-left: 6px solid transparent; 
    border-right: 6px solid transparent;
 }
 .IDX_news li:last-child { border: none; }
 .IDX_news li:hover:last-child   { background: #1a3a75; color: #fff; border-color: #1a3a75; }
 .IDX_article    { background: #eff0f2; min-height: 190px; padding: 10px; font-size: 13px; line-height: 1.2em; }
-
 .date           { color: #1a3a75; }
 
 .IDX_blocks h2  { 
@@ -314,7 +313,30 @@ blockquote img  { max-width: 100%; }
 .blue       { color: #1A3A75; }
 .blue a     { color: #1A3A75; text-decoration: underline; }
 
-/* 7. Media queries
+/* 7. Admin
+--------------------------------------------*/
+#isadmin {
+    position:absolute; 
+    z-index:10;
+    width: 200px;
+    padding: 0 10px 5px 15px;
+    background: white;
+    background: rgba(240, 244, 250, 0.9);
+    box-shadow: 1px 1px 2px lightgrey inset;
+    color: black;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    right: 0px;
+    top: 5px;
+}
+#isadmin a {
+    color: black;
+}
+#isadmin h2 {
+    padding:8px 8px 8px 40px; background-position:10px 50%; background-repeat:no-repeat;
+}
+/* 8. Media queries
 -------------------------------------------------- */
 /* Large desktop */
 @media (min-width: 1200px) {

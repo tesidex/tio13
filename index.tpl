@@ -29,11 +29,11 @@
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner2.jpg" alt="" width="240" height="200" />
         </div>
-        <aside class="margintop10 popular">
-            <div class="nav-tabs" id="">
-                <h2 class="pull-left"><a href="#popular" data-toggle="tab"><span>Популярное</span></a></h2>
-                <h2 class="pull-right"><a href="#discuss" data-toggle="tab"><span>Обсуждаемое</span></a></h2>
-            </div>
+        <aside class="margintop10 popular" id="TABS1">
+            <ul class="nav-tabs">
+                <li><h2><a href="#popular" data-toggle="tab"><span>Популярное</span></a></h2></li>
+                <li><h2><a href="#discuss" data-toggle="tab"><span>Обсуждаемое</span></a></h2></li>
+            </ul>
             <div class="tab-content">
                 <ul class="tab-pane active" id="popular">
                     <li>

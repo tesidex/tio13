@@ -59,7 +59,7 @@
                 <!-- ENDIF -->
             </header>
             <div class="row">
-                <div class="span4_left">
+                <div class="span4_left" id="logo">
                     <h1>
                         <a href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">
                             <span class="invisible">{PHP.cfg.maintitle}</span>
@@ -81,20 +81,7 @@
                 <span class="icon-bar"></span>
             </a>
             <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="<!-- IF {PHP.m} == 'index' OR {PHP.env.ext} == 'index' -->active<!-- ENDIF -->"><a href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">Главная</a></li>
-                    <li class="<!-- IF {PHP.m} == 'contact' OR {PHP.env.ext} == 'contact' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Газета</a></li>
-                    <li class="<!-- IF {PHP.m} == 'page' OR {PHP.env.ext} == 'page' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=pro')}">Для профи</a></li>
-                    <li class="<!-- IF {PHP.m} == 'forums' OR {PHP.env.ext} == 'forums' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('#')}">Наши проекты</a></li>
-                    <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=vitrina-turov')}">Поиск туров</a></li>
-                    <li class="<!-- IF {PHP.m} == 'page' OR {PHP.env.ext} == 'page' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=news')}">Новости</a></li>
-                    <li class="<!-- IF {PHP.m} == 'forums' OR {PHP.env.ext} == 'forums' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Фотогалерея</a></li>
-                    <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Форум</a></li>
-                    <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Блоги</a></li>
-                    <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Справочник</a></li>
-                    <li class="<!-- IF {PHP.m} == 'users' OR {PHP.env.ext} == 'users' -->active<!-- ENDIF -->"><a href="{PHP|cot_url('page', 'c=#')}">Выставки</a></li>
-                </ul>
-
+                {FILE "{PHP.cfg.themes_dir}/{PHP.theme}/inc/nav.tpl"}
             </div><!--/.nav-collapse -->
         </div>
     </nav>

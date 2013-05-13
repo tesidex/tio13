@@ -29,6 +29,20 @@
               {PAGEEDIT_FORM_AUTHOR}
             </div>
           </div>
+	      <!-- IF {PHP.pag.page_cat} -->
+          <div class="control-group">
+            <label class="control-label">Событие c :</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_DATE_FROM}
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Событие до:</label>
+            <div class="controls">
+              {PAGEEDIT_FORM_DATE_TO}
+            </div>
+          </div>
+	      <!-- ENDIF -->
           <div class="control-group">
             <label class="control-label">{PAGEEDIT_FORM_BIGTEXT_TITLE}:</label>
             <div class="controls">

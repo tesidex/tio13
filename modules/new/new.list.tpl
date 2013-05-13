@@ -73,9 +73,9 @@
         <div class="row">
             <div class="span8">
                 <!-- IF {PHP.usr.auth_write} -->
-                <div class="block">
-                    <h3 class="admin">{PHP.L.Admin}</h3>
-                    <ul class="bullets">
+                <div>
+                    <h3>{PHP.L.Admin}</h3>
+                    <ul>
                         <!-- IF {PHP.usr.isadmin} -->
                         <li><a href="{PHP|cot_url('admin')}">{PHP.L.Adminpanel}</a></li>
                         <!-- ENDIF -->
@@ -97,17 +97,37 @@
                 <!-- END: LIST_ROWCAT -->
 
                 <!-- BEGIN: LIST_ROW -->
-                <h3><a href="{LIST_ROW_URL}">{LIST_ROW_SHORTTITLE}</a></h3>
-                <!-- IF {LIST_ROW_DESC} --><p class="small marginbottom10">{LIST_ROW_DESC}</p><!-- ENDIF -->
-                <!-- IF {PHP.usr.isadmin} --><p class="small marginbottom10">{LIST_ROW_ADMIN} ({LIST_ROW_COUNT})</p><!-- ENDIF -->
-                <div>
-                    {LIST_ROW_TEXT_CUT}
-                    <!-- IF {LIST_ROW_TEXT_IS_CUT} -->{LIST_ROW_MORE}<!-- ENDIF -->
-                </div>
+                <article>
+                    <div class="row-fluid">
+                        <!-- IF {LIST_ROW_AVATAR} -->
+                        <div class="span2">
+                            <a href="{LIST_ROW_URL}" class="thumbnail">
+                                <!-- IF {LIST_ROW_AVATAR|mb_strstr($this,'page_')} -->
+                                <img src="./datas/photos/thumb_{LIST_ROW_AVATAR}" alt="">
+                                <!-- ELSE -->
+                                <img src="http://tio.by/uploads/fields_files/{LIST_ROW_AVATAR}" alt="">
+                                <!-- ENDIF -->
+                            </a>
+                        </div>
+                        <div class="span10">
+                            <!-- ELSE -->
+                            <div class="span12">
+                                <!-- ENDIF -->
+                                <h1><a href="{LIST_ROW_URL}">{LIST_ROW_SHORTTITLE}</a></h1>
+                                <!-- IF {LIST_ROW_DESC} --><p class="small marginbottom10">{LIST_ROW_DESC}</p><!-- ENDIF -->
+                                <!-- IF {PHP.usr.isadmin} --><p class="small marginbottom10">{LIST_ROW_ADMIN} ({LIST_ROW_COUNT})</p><!-- ENDIF -->
+                                <div>
+                                    {LIST_ROW_TEXT_CUT}
+                                    <!-- IF {LIST_ROW_TEXT_IS_CUT} --><span class="more">{LIST_ROW_MORE}</span><!-- ENDIF -->
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                </article>
                 <!-- END: LIST_ROW -->
             </div>
             <!-- IF {LIST_TOP_PAGINATION} -->
-            <p class="paging clear"><span>{PHP.L.New} {LIST_TOP_CURRENTNEW} {PHP.L.Of} {LIST_TOP_TOTALNEWS}</span>{LIST_TOP_NEWPREV}{LIST_TOP_PAGINATION}{LIST_TOP_NEWNEXT}</p>
+            <p class="paging clear"><span class="paddingright10">{PHP.L.New} {LIST_TOP_CURRENTNEW} {PHP.L.Of} {LIST_TOP_TOTALNEWS}</span>{LIST_TOP_NEWPREV}{LIST_TOP_PAGINATION}{LIST_TOP_NEWNEXT}</p>
             <!-- ENDIF -->
         </div>
         <div class="row">
@@ -119,5 +139,5 @@
     </div>
 
 </div>
-</div>
+
 <!-- END: MAIN -->

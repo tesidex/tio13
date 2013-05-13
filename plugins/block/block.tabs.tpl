@@ -22,7 +22,7 @@
 
 <div class="row">
     <div class="span8">
-	<div class="tab-content">
+	<div class="tab-content padding10">
 	    <!-- BEGIN: PAGE_ROW -->
 
 	    <div class="tab-pane
@@ -31,7 +31,12 @@
 	    <!-- ENDIF -->
 		     " id="{PAGE_ROW_ID}" class="IDX_article">
 
-		<img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_article.jpg" alt="" width="250" height="188" />
+		<!-- IF {PAGE_ROW_AVATAR|mb_strstr($this,'page_')} -->
+                <img class="pull-left marginright10" src="./datas/photos/thumb_{PAGE_ROW_AVATAR}" alt="" width="250" height="188">
+                <!-- ELSE -->
+                <img class="pull-left marginright10" src="http://tio.by/uploads/fields_files/{PAGE_ROW_AVATAR}" alt="" width="250" height="188">
+                <!-- ENDIF -->
+                <img  class="pull-left marginright10" src="./datas/photos/thumb_{PAGE_AVATAR}" alt="" width="250" height="188">
 		<p class="date">{PAGE_ROW_DATE}</p>
 		<p>{PAGE_ROW_TEXT_CUT}</p>
 		<p>{PAGE_ROW_OWNER_ID}</p>{PAGE_ROW_URL}

@@ -37,12 +37,12 @@
             <div class="tab-content">
                 <ul class="tab-pane active" id="popular">
                     <li>
-                        <p>{INDEX_BLOCK_TURBIZNES}</p>
+                        {INDEX_BLOCK_TURBIZNES}
                     </li>
                </ul>
                 <ul class="tab-pane" id="discuss">
                     <li>
-                        <p>{INDEX_BLOCK_NOVOSTI}</p>
+                       {INDEX_BLOCK_NOVOSTI}
                     </li>
                </ul>
             </div>

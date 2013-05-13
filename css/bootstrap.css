@@ -731,10 +731,10 @@ dd {
   margin-left: 180px;
 }
 hr {
-  margin: 20px 0;
+  margin: 15px 0;
   border: 0;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #ffffff;
+  border-top: none;
+  border-bottom: 1px solid #E2E2E2;
 }
 abbr[title],
 abbr[data-original-title] {
@@ -1970,11 +1970,10 @@ legend + .control-group {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  padding: 0px 9px; 
+  padding: 6px 9px; 
   background: #626262; 
   color: #fff; 
   font-size: 12px; 
-  height: 23px;
   vertical-align: middle;
   cursor: pointer;
   border: 0;
@@ -3203,7 +3202,7 @@ input[type="submit"].btn.btn-mini {
 }
 .tab-content {
   overflow: hidden;
-}
+ }
 .tabs-below > .nav-tabs,
 .tabs-right > .nav-tabs,
 .tabs-left > .nav-tabs {

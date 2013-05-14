@@ -1,6 +1,4 @@
-<?php
-
-defined('COT_CODE') or die('Wrong URL');
+<?php defined('COT_CODE') or die('Wrong URL');
 
 /* ====================
   [BEGIN_COT_EXT]
@@ -53,13 +51,13 @@ foreach ($categories as $v) {
 }
 //cot_print($cats);
 
-/* === Hook - Part1 : Set === FIRST === */
-$block_first_extp = cot_getextplugins('block.first');
-/* === Hook - Part1 : Set === LOOP === */
-$block_extp = cot_getextplugins('block.loop');
-/* === Hook - Part1 : Set === TAGS === */
-$block_tags_extp = cot_getextplugins('block.tags');
-/* ===== */
+///* === Hook - Part1 : Set === FIRST === */
+//$block_first_extp = cot_getextplugins('block.first');
+///* === Hook - Part1 : Set === LOOP === */
+//$block_extp = cot_getextplugins('block.loop');
+///* === Hook - Part1 : Set === TAGS === */
+//$block_tags_extp = cot_getextplugins('block.tags');
+///* ===== */
 $catn = 1;
 
 foreach ($cats as $k => $v) {
@@ -86,11 +84,13 @@ foreach ($cats as $k => $v) {
     $block_link_params = ($c != $indexcat) ? "c=" . $c : '';
     $block_join_columns = '';
     $block_join_tables = '';
-    /* === Hook - Part2 : Include === FIRST === */
-    foreach ($block_first_extp as $pl) {
-	include $pl;
-    }
-    /* ===== */
+
+	/* === Hook === */
+	foreach (cot_getextplugins('block.page.first') as $pl)
+	{
+		include $pl;
+	}
+	/* ===== */
 
     $sql = $db->query("SELECT p.*, u.* $block_join_columns
 			FROM $db_pages AS p LEFT JOIN $db_users AS u ON u.user_id=p.page_ownerid $block_join_tables
@@ -139,11 +139,14 @@ foreach ($cats as $k => $v) {
 	));
 	$block->assign(cot_generate_usertags($pag, 'PAGE_ROW_OWNER_'));
 
-	/* === Hook - Part2 : Include === LOOP === */
-	foreach ($block_extp as $pl) {
-	    include $pl;
+
+	/* === Hook === */
+	foreach (cot_getextplugins('block.page.loop') as $pl)
+	{
+		include $pl;
 	}
 	/* ===== */
+
 
 	$block->parse('BLOCK.PAGE_ROW');
     }
@@ -166,11 +169,13 @@ foreach ($cats as $k => $v) {
 	'PAGE_CAT' => $cat
     ));
 
-    /* === Hook - Part2 : Include === TAGS === */
-    foreach ($block_tags_extp as $pl) {
-	include $pl;
-    }
-    /* ===== */
+	/* === Hook === */
+	foreach (cot_getextplugins('block.page.tags') as $pl)
+	{
+		include $pl;
+	}
+	/* ===== */
+
 
     $block->parse('BLOCK');
     $block_html = $block->text('BLOCK');
@@ -235,11 +240,13 @@ foreach ($cats as $k => $v) {
     $block_link_params = ($c != $indexcat) ? "c=" . $c : '';
     $block_join_columns = '';
     $block_join_tables = '';
-    /* === Hook - Part2 : Include === FIRST === */
-    foreach ($block_first_extp as $pl) {
-	include $pl;
-    }
-    /* ===== */
+
+	/* === Hook === */
+	foreach (cot_getextplugins('block.new.first') as $pl)
+	{
+		include $pl;
+	}
+	/* ===== */
 
     $sql = $db->query("SELECT p.*, u.* $block_join_columns
 			FROM $db_news AS p LEFT JOIN $db_users AS u ON u.user_id=p.new_ownerid $block_join_tables
@@ -288,9 +295,10 @@ foreach ($cats as $k => $v) {
 	));
 	$block->assign(cot_generate_usertags($pag, 'PAGE_ROW_OWNER_'));
 
-	/* === Hook - Part2 : Include === LOOP === */
-	foreach ($block_extp as $pl) {
-	    include $pl;
+	/* === Hook === */
+	foreach (cot_getextplugins('block.new.loop') as $pl)
+	{
+		include $pl;
 	}
 	/* ===== */
 
@@ -315,11 +323,12 @@ foreach ($cats as $k => $v) {
 	'NEW_CAT' => $cat
     ));
 
-    /* === Hook - Part2 : Include === TAGS === */
-    foreach ($block_tags_extp as $pl) {
-	include $pl;
-    }
-    /* ===== */
+	/* === Hook === */
+	foreach (cot_getextplugins('block.new.tags') as $pl)
+	{
+		include $pl;
+	}
+	/* ===== */
 
     $block->parse('BLOCK');
     $block_html = $block->text('BLOCK');

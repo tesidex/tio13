@@ -11,9 +11,23 @@
             </div>
           </div>
           <hr />
+          <!-- BEGIN: TAGS -->
+          <div class="control-group">
+            <label class="control-label">{NEWEDIT_TOP_TAGS}:</label>
+            <div class="controls">
+              {NEWEDIT_FORM_TAGS}<span class="help-inline">({NEWEDIT_TOP_TAGS_HINT})</span>
+            </div>
+          </div>
+            <!-- END: TAGS -->
+            <div class="control-group">
+                <label class="control-label">{NEWEDIT_FORM_COUNTRY_TITLE}:</label>
+                <div class="controls">
+                    {NEWEDIT_FORM_COUNTRY}
+                </div>
+            </div>
           <div class="control-group">
             <label class="control-label">{PHP.L.Title}:</label>
-            <div class="controls">
+            <div class="controls width60">
               {NEWEDIT_FORM_TITLE}
             </div>
           </div>
@@ -23,16 +37,15 @@
               {NEWEDIT_FORM_DESC}
             </div>
           </div>
+            <hr />
+          {NEWEDIT_FORM_TEXT}
+          <!-- IF {NEWEDIT_FORM_PFS} -->{NEWEDIT_FORM_PFS}<!-- ENDIF -->
+          <!-- IF {NEWEDIT_FORM_SFS} -->{NEWEDIT_FORM_SFS}<!-- ENDIF -->
+          <hr />
           <div class="control-group">
             <label class="control-label">{PHP.L.Author}:</label>
             <div class="controls">
               {NEWEDIT_FORM_AUTHOR}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{NEWEDIT_FORM_COUNTRY_TITLE}:</label>
-            <div class="controls">
-              {NEWEDIT_FORM_COUNTRY}
             </div>
           </div>
           <div class="control-group">
@@ -63,11 +76,7 @@
             </div>
           </div>
 
-          <hr />
-          {NEWEDIT_FORM_TEXT}
-          <!-- IF {NEWEDIT_FORM_PFS} -->{NEWEDIT_FORM_PFS}<!-- ENDIF -->
-          <!-- IF {NEWEDIT_FORM_SFS} -->{NEWEDIT_FORM_SFS}<!-- ENDIF -->
-          <hr />
+          
           <div class="control-group">
             <label class="control-label">{PHP.L.page_file}:</label>
             <div class="controls">
@@ -118,14 +127,7 @@
               {NEWEDIT_FORM_LOCALSTATUS}
             </div>
           </div>
-            <!-- BEGIN: TAGS -->
-          <div class="control-group">
-            <label class="control-label">{NEWEDIT_TOP_TAGS}:</label>
-            <div class="controls">
-              {NEWEDIT_FORM_TAGS}<span class="help-inline">({NEWEDIT_TOP_TAGS_HINT})</span>
-            </div>
-          </div>
-            <!-- END: TAGS -->
+            
           <!-- BEGIN: ADMIN -->
           <div class="control-group">
             <label class="control-label">{PHP.L.Owner}:</label>

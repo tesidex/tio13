@@ -1231,7 +1231,7 @@ input[type="color"],
 input,
 textarea,
 .uneditable-input {
-  width: 206px;
+  width: 60%;
 }
 textarea {
   height: auto;
@@ -1318,7 +1318,7 @@ input[type="file"] {
   line-height: 30px;
 }
 select {
-  width: 220px;
+  width: auto;
   border: 1px solid #cccccc;
   background-color: #ffffff;
 }
@@ -1645,6 +1645,7 @@ input[type="checkbox"][readonly] {
   background-color: #d9edf7;
   border-color: #3a87ad;
 }
+
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
@@ -1970,7 +1971,7 @@ legend + .control-group {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  padding: 6px 9px; 
+  padding: 4px 9px; 
   background: #626262; 
   color: #fff; 
   font-size: 12px; 
@@ -4024,7 +4025,7 @@ input[type="submit"].btn.btn-mini {
   transition: all 0.2s ease-in-out;
 }
 a.thumbnail:hover {
-  border-color: #d8503a;
+  border-color: #1a3a75;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);

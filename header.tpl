@@ -24,7 +24,7 @@
             $("input:file").uniform();
         });
         </script>
-        <!-- IF {PHP.cfg.mainurl} == 'tio.by' OR 'adver.tio.by' -->
+        <!-- IF ({PHP.cfg.mainurl} == 'http://tio.by') OR ({PHP.cfg.mainurl} == 'http://adver.tio.by') -->
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
         <script type="text/javascript">stLight.options({publisher: "592f9ba0-55f5-4505-92b4-f06cafa824c9", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
         <!-- ENDIF -->

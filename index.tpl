@@ -36,10 +36,10 @@
             </ul>
             <div class="tab-content">
                 <ul class="tab-pane active" id="popular">
-                    {PHP.blockrecent('popular',10)}
+                    {PHP|blockrecent('popular',10)}
                </ul>
                 <ul class="tab-pane" id="discuss">
-                    {PHP.blockrecent('discuss',5)}
+                    {PHP|blockrecent('discuss',5)}
                </ul>
             </div>
         </aside>

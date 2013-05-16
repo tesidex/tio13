@@ -7,7 +7,7 @@
 
 	    <!-- BEGIN: TABS_ROW -->
 	    <li>
-		<a data-toggle="tab" href="#{TABS_ROW_ID}" title="{TABS_ROW_SHORTTITLE}">{TABS_ROW_SHORTTITLE}</a>
+		<a data-toggle="tab" href="#{TABS_ROW_ID}" title="{TABS_ROW_SHORTTITLE}"><span>{TABS_ROW_SHORTTITLE}</span></a>
 	    </li>
 
 	    <!-- END: TABS_ROW -->

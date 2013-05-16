@@ -29,7 +29,7 @@
       </form>
 
       <p><a href="{PHP|cot_url('users', 'm=passrecover')}" class="btn btn-small">{PHP.L.users_lostpass}</a></p>
-
+      <p><a class="btn" href="{PHP|cot_url('users','m=register')}">Регистрация</a></p>
       <!-- BEGIN: USERS_AUTH_MAINTENANCE -->
       <div class="error clear">
         <h4>{PHP.L.users_maintenance1}</h4>

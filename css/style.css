@@ -99,23 +99,26 @@ nav {
 .IDX_news ul    { background: #f7f7f7; min-height: 80px; display: block; margin: 0; width: 100%; }
 .IDX_news li         {
     border-right: 1px solid #dddddd;
-    padding: 0px 0 20px 20px; 
     background: #f7f7f7;
-    color: #404040; 
-    height: 80px; 
-    font-size: 12px;
-    line-height: 1em;
+    height: 85px; 
     margin: 0px;
-    display: block;
-    cursor: pointer;
     float: left;
-    width: 22%;
-    position: relative;
+    width: 24.8%;
+    
     }
-.IDX_news li:hover  { background: #1a3a75; color: #fff; border-color: #1a3a75; }
-.IDX_news li h3     { line-height: 15px; }
-.IDX_news li:hover a  { color: #fff; text-decoration: none;  }
-.IDX_news li:hover:after   {
+.IDX_news li a { 
+    width: 80%;
+    line-height: 15px;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    position: relative;
+    padding: 20px;
+    height: 50px;
+}   
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover { background: #1a3a75; color: #fff; border-color: #1a3a75; text-decoration: none; display: block; }
+
+#myTab a:hover:after, .active > a:after  {
    content: "";
    position: absolute;
    top: 100%;
@@ -124,9 +127,10 @@ nav {
    border-top-color: inherit; 
    border-left: 6px solid transparent; 
    border-right: 6px solid transparent;
+   
 }
 .IDX_news li:last-child { border: none; }
-.IDX_news li:hover:last-child   { background: #1a3a75; color: #fff; border-color: #1a3a75; }
+#myTab > .tab-content { background: #eff0f2; }
 .IDX_article    { background: #eff0f2; min-height: 190px; padding: 10px; font-size: 13px; line-height: 1.2em; }
 .date           { color: #1a3a75; }
 
@@ -191,8 +195,8 @@ nav {
 .comments               { color: #1a3a74; font-weight: bold; background: url('../img/comments.png') no-repeat center left; padding-left: 20px; font-size: 11px; }
 .comments a             { color: #1a3a74; text-decoration: underline; }
 .comment p              { margin: 0; font-style: italic; }
-.PAGE_soc_buttons span   { margin-right: -5px; }
-.editdate select { width: 50px; }
+.PAGE_soc_buttons span  { margin-right: -5px; }
+.editdate select        { width: auto; }
 /* 4. Footer
 -------------------------------------------------- */
 footer          { color: #fff; padding: 15px; background: #626262; height: auto; }

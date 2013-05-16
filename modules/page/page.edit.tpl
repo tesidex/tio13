@@ -55,7 +55,61 @@
                     <!-- IF {PAGEEDIT_FORM_AVATARFILE} -->{PHP.L.Uploaded}: {PAGEEDIT_FORM_AVATARFILE}<br /> {PHP.L.Delete}: {PAGEEDIT_FORM_AVATARDELETE}<!-- ENDIF -->
                 </div>
             </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_SIGNATURE_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_SIGNATURE}
+                </div>
+            </div>
             <hr />
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_BOOLEAN_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_BOOLEAN}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_COMPANY_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_COMPANY}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_DICT_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_DICT}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_IS_COMMENT_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_IS_COMMENT}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_IS_RSS_TUTBY_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_IS_RSS_TUTBY}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_NEWSPAPER_ID_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_NEWSPAPER_ID}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_ORGANIZER_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_ORGANIZER}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEEDIT_FORM_POSITION_TITLE}:</label>
+                <div class="controls">
+                    {PAGEEDIT_FORM_POSITION}
+                </div>
+            </div> 
             <!-- IF {PHP.pag.page_cat} -->
             <div class="control-group">
                 <label class="control-label">Событие c :</label>
@@ -101,7 +155,7 @@
             <div class="control-group">
                 <label class="control-label">{PHP.L.page_file}:</label>
                 <div class="controls">
-                    {PAGEEDIT_FORM_FILE} {PHP.themelang.pageadd.Filehint}
+                    {PAGEEDIT_FORM_FILE} {PHP.themelang.pageedit.Filehint}
                     </div>
                 </div>
                 <div class="control-group">

@@ -6,12 +6,8 @@
 	<ul class="nav nav-tabs" id="myTab">
 
 	    <!-- BEGIN: TABS_ROW -->
-	    <li
-	    <!-- IF {PHP.jj} == 1 -->
-		      class="active"
-	    <!-- ENDIF -->
-	    >
-		<h3><a data-toggle="tab" href="#{TABS_ROW_ID}" title="{TABS_ROW_SHORTTITLE}">{TABS_ROW_SHORTTITLE}</a></h3>
+	    <li>
+		<a data-toggle="tab" href="#{TABS_ROW_ID}" title="{TABS_ROW_SHORTTITLE}">{TABS_ROW_SHORTTITLE}</a>
 	    </li>
 
 	    <!-- END: TABS_ROW -->
@@ -25,11 +21,11 @@
 	<div class="tab-content padding10">
 	    <!-- BEGIN: PAGE_ROW -->
 
-	    <div class="tab-pane
+	    <div id="{PAGE_ROW_ID}" class="IDX_article tab-pane"
 	    <!-- IF {PHP.jj} == 1 -->
-		     active
+		     class="active" 
 	    <!-- ENDIF -->
-		     " id="{PAGE_ROW_ID}" class="IDX_article">
+		  >
 
 		<!-- IF {PAGE_ROW_AVATAR|mb_strstr($this,'page_')} -->
                 <img class="pull-left marginright10" src="./datas/photos/thumb_{PAGE_ROW_AVATAR}" alt="" width="250" height="188">
@@ -37,10 +33,10 @@
                 <img class="pull-left marginright10" src="http://tio.by/uploads/fields_files/{PAGE_ROW_AVATAR}" alt="" width="250" height="188">
                 <!-- ENDIF -->
                 <img  class="pull-left marginright10" src="./datas/photos/thumb_{PAGE_AVATAR}" alt="" width="250" height="188">
+
 		<p class="date">{PAGE_ROW_DATE}</p>
 		<p>{PAGE_ROW_TEXT_CUT}</p>
-		<p>{PAGE_ROW_OWNER_ID}</p>{PAGE_ROW_URL}
-		<p>{PAGE_ROW_AUTHOR}</p>
+		
                 <a href="{PAGE_ROW_URL}" class="btn">Читать далее</a>
 	    </div>
 
@@ -51,8 +47,8 @@
 
 <script>
 
- $(function () {
-$('#myTab a:first').tab('show');
+$(function () {
+    $('#myTab a:first').tab('show');
 })
 </script>
 

@@ -1,124 +1,196 @@
 <!-- BEGIN: MAIN -->
-    <div class="row-fluid">
-      <div class="span12">
+<div class="row-fluid">
+    <div class="span12">
         <h3>{PAGEADD_PAGETITLE}</h3>
         {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
         <form action="{PAGEADD_FORM_SEND}" enctype="multipart/form-data" method="post" name="pageform" class="form-horizontal">
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Category}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_CAT}
+            <div class="control-group">
+                <label class="control-label">{PHP.L.Category}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_CAT}
+                </div>
             </div>
-          </div>
-          <hr />
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Title}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_TITLE}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Description}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_DESC}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Author}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_AUTHOR}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PAGEADD_FORM_AVATAR_TITLE}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_AVATAR}
-            </div>
-          </div>
-          <hr />
-          
-          <hr />
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Alias}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_ALIAS}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Keywords}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_KEYWORDS}
-            </div>
-          </div>
-            
-          <hr />
-          {PAGEADD_FORM_TEXT}
-          <!-- IF {PAGEADD_FORM_PFS} -->{PAGEADD_FORM_PFS}<!-- ENDIF -->
-          <!-- IF {PAGEADD_FORM_SFS} -->{PAGEADD_FORM_SFS}<!-- ENDIF -->
-          <hr />
-          <div class="control-group">
-            <label class="control-label">{PHP.L.page_file}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_FILE} {PHP.L.page_filehint}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.URL}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_URL} &nbsp; {PAGEADD_FORM_PFS_URL_USER} &nbsp; {PAGEADD_FORM_PFS_URL_SITE}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Filesize}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_SIZE} {PHP.L.page_filesizehint}
-            </div>
-          </div>
-            
-            <!-- IF {PHP.usr.maingrp} == 5 -->
-                  <div class="control-group">
-            <label class="control-label">{PHP.L.Begin}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_BEGIN}
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Expire}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_EXPIRE}
-            </div>
-          </div>
+            <hr />
             <!-- BEGIN: TAGS -->
-          <div class="control-group">
-            <label class="control-label">{PAGEADD_TOP_TAGS}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_TAGS} ({PAGEADD_TOP_TAGS_HINT})
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_TOP_TAGS}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_TAGS} ({PAGEADD_TOP_TAGS_HINT})
+                </div>
             </div>
-          </div>
             <!-- END: TAGS -->
-          <!-- BEGIN: ADMIN -->
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Owner}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_OWNER}
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_COUNTRY_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_COUNTRY}
+                </div>
             </div>
-          </div>
-          <!-- END: ADMIN -->
-          <div class="control-group">
-            <label class="control-label">{PHP.L.Parser}:</label>
-            <div class="controls">
-              {PAGEADD_FORM_PARSER}
+            <div class="control-group">
+                <label class="control-label">{PHP.L.Title}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_TITLE}
+                </div>
             </div>
-          </div>
-            <!-- ENDIF -->      
-            
-          <!-- IF {PHP.usr_can_publish} -->
-          <button type="submit" name="rpagestate" value="0" class="btn btn-success">{PHP.L.Publish}</button>&nbsp;
-          <!-- ENDIF -->
-          <button type="submit" name="rpagestate" value="2" class="btn">{PHP.L.Saveasdraft}</button>
-          <button type="submit" name="rpagestate" value="1" class="btn">{PHP.L.Submitforapproval}</button>
-        </form>
-        <div class="help">{PHP.L.page_formhint}</div>
-      </div>
-    </div>
-<!-- END: MAIN -->
+            <div class="control-group">
+                <label class="control-label">{PHP.L.Description}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_DESC}
+                </div>
+            </div>
+            <hr />
+            {PAGEADD_FORM_TEXT}
+            <!-- IF {PAGEADD_FORM_PFS} -->{PAGEADD_FORM_PFS}<!-- ENDIF -->
+            <!-- IF {PAGEADD_FORM_SFS} -->{PAGEADD_FORM_SFS}<!-- ENDIF -->
+            <hr />  
+            <div class="control-group">
+                <label class="control-label">{PHP.L.Author}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_AUTHOR}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_AVATAR_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_AVATAR}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_SIGNATURE_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_SIGNATURE}
+                </div>
+            </div>  
+            <hr />
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_BOOLEAN_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_BOOLEAN}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_COMPANY_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_COMPANY}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_DATE_FROM_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_DATE_FROM}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_DATE_TO_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_DATE_TO}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_DICT_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_DICT}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_IS_COMMENT_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_IS_COMMENT}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_IS_RSS_TUTBY_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_IS_RSS_TUTBY}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_NEWSPAPER_ID_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_NEWSPAPER_ID}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_ORGANIZER_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_ORGANIZER}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PAGEADD_FORM_POSITION_TITLE}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_POSITION}
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label">{PHP.L.Alias}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_ALIAS}
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{PHP.L.Keywords}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_KEYWORDS}
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <label class="control-label">{PHP.L.page_file}:</label>
+                <div class="controls">
+                    {PAGEADD_FORM_FILE} {PHP.L.page_filehint}
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">{PHP.L.URL}:</label>
+                    <div class="controls">
+                        {PAGEADD_FORM_URL} &nbsp; {PAGEADD_FORM_PFS_URL_USER} &nbsp; {PAGEADD_FORM_PFS_URL_SITE}
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">{PHP.L.Filesize}:</label>
+                    <div class="controls">
+                        {PAGEADD_FORM_SIZE} {PHP.L.page_filesizehint}
+                        </div>
+                    </div>
+
+<!-- IF {PHP.usr.maingrp} == 5 -->
+                    <div class="control-group">
+                        <label class="control-label">{PHP.L.Begin}:</label>
+                        <div class="controls">
+                            {PAGEADD_FORM_BEGIN}
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">{PHP.L.Expire}:</label>
+                        <div class="controls">
+                            {PAGEADD_FORM_EXPIRE}
+                        </div>
+                    </div>
+
+                    <!-- BEGIN: ADMIN -->
+                    <div class="control-group">
+                        <label class="control-label">{PHP.L.Owner}:</label>
+                        <div class="controls">
+                            {PAGEADD_FORM_OWNER}
+                        </div>
+                    </div>
+                    <!-- END: ADMIN -->
+                    <div class="control-group">
+                        <label class="control-label">{PHP.L.Parser}:</label>
+                        <div class="controls">
+                            {PAGEADD_FORM_PARSER}
+                        </div>
+                    </div>
+                    <!-- ENDIF -->      
+
+                    <!-- IF {PHP.usr_can_publish} -->
+                    <button type="submit" name="rpagestate" value="0" class="btn btn-success">{PHP.L.Publish}</button>&nbsp;
+                    <!-- ENDIF -->
+                    <button type="submit" name="rpagestate" value="2" class="btn">{PHP.L.Saveasdraft}</button>
+                    <button type="submit" name="rpagestate" value="1" class="btn">{PHP.L.Submitforapproval}</button>
+                </form>
+                <div class="help">{PHP.L.page_formhint}</div>
+            </div>
+        </div>
+        <!-- END: MAIN -->

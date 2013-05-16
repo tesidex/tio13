@@ -36,14 +36,10 @@
             </ul>
             <div class="tab-content">
                 <ul class="tab-pane active" id="popular">
-                    <li>
-                        {INDEX_BLOCK_TURBIZNES}
-                    </li>
+                    {PHP.blockrecent('popular',10)}
                </ul>
                 <ul class="tab-pane" id="discuss">
-                    <li>
-                       {INDEX_BLOCK_NOVOSTI}
-                    </li>
+                    {PHP.blockrecent('discuss',5)}
                </ul>
             </div>
         </aside>

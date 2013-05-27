@@ -18,27 +18,64 @@ Hooks=global
 
 function blockrecent($mode, $pagesnum = 5)
 {
-	global $db, $structure, $db_pages, $db_users, $sys, $cfg, $L, $cot_extrafields, $usr;
+     
+	global $db, $structure, $db_news, $db_users, $sys, $cfg, $L, $cot_extrafields, $usr, $cache;
+	
 
+	if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0)
+		{
+			$ri_cache_id = "$theme.$lang.news";
+			$string = $cache->disk->get($ri_cache_id, 'block', (int) $cfg['plugin']['block']['cache_ttl']);
+		}
+	if(empty($string))	
+	{
+	$where = "WHERE new_state=0 
+			  AND new_begin <= {$sys['now']} 
+			  AND (new_expire = 0 OR new_expire > {$sys['now']}) 
+			  AND new_cat <> 'system' 
+			  AND new_begin >= {$sys['now']} - 11604800";
+			  
 	if ($mode == 'popular')
 	{
-	     //page_begin <= {$sys['now']} AND page_begin >= {$sys['now'] - week}
-		$where = "WHERE page_state=0 AND page_begin <= {$sys['now']} AND (page_expire = 0 OR page_expire > {$sys['now']}) AND page_cat <> 'system' " . $incat;
-		$totalrecent['pages'] = $cfg['plugin']['recentitems']['maxpages'];
+//		$where = "WHERE page_state=0 AND page_begin <= {$sys['now']} AND (page_expire = 0 OR page_expire > {$sys['now']}) AND page_cat <> 'system' AND page_begin >= {$sys['now']} - 604800";
+//		$orderby = "ORDER BY page_count";
+
+		$orderby = "ORDER BY new_count";
+		
+		$sql = $db->query("SELECT * FROM $db_news
+		$where $orderby LIMIT $pagesnum");
+	
 	}
 	elseif ($mode == 'discuss')
 	{
-		$where = "WHERE page_date >= $mode AND page_begin <= {$sys['now']} AND (page_expire = 0 OR page_expire > {$sys['now']}) AND page_state=0 AND page_cat <> 'system' " . $incat;
-		$totalrecent['pages'] = $db->query("SELECT COUNT(*) FROM $db_pages " . $where)->fetchColumn();
+		$sql = $db->query("SELECT
+			      p.new_id,
+			      p.new_cat,
+			      p.new_title,
+			      c.postcount
+			      FROM cot_news as p
+			      INNER JOIN (
+					SELECT
+					com_code,
+					count(*) AS postcount
+			      FROM cot_com
+			      GROUP BY com_code
+					     ) as c
+			      on p.new_id = c.com_code
+			      $where
+			      Order by c.postcount desc
+			      LIMIT $pagesnum");
 	}
 
 
-	$sql = $db->query("SELECT p.*, u.* $join_columns
-		FROM $db_pages AS p
-			LEFT JOIN $db_users AS u ON u.user_id=p.page_ownerid
-		$join_tables
-		$where ORDER by page_date desc LIMIT $d, $maxperpage");
-
-	$string = 'aaaaaaaaaaaaaaaaaaaaaaaaaa';
+	$string = '';
+	foreach ($sql->fetchAll() as $row) {
+	     $string.='<li><h3><a href='.cot_url('new', 'c='.$row['new_cat'].'&id='.$row['new_id']).'>'.$row['new_title'].'</h3></li>';
+	}
+	if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0)
+			{
+				$cache->disk->store($ri_cache_id, $string, 'block');
+			}
+	}
 	return $string;
 }

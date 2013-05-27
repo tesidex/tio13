@@ -22,7 +22,7 @@ Requires_modules=page
 category=01:string::block:Block category codes, comma separated
 maxpages=02:string::10:Recent pages displayed
 syncpagination=03:radio::0:Enable pagination for additional categories
-cache_ttl=04:select:0,60,180,300,600,1800,3600:0:Cache lifetime in seconds, 0 disables cache
+cache_ttl=04:select:0,60,180,300,600,1800,3600:600:Cache lifetime in seconds, 0 disables cache
 [END_COT_EXT_CONFIG]
 ==================== */
 

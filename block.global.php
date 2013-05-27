@@ -63,7 +63,7 @@ function blockrecent($mode, $pagesnum = 5)
 					     ) as c
 			      on p.new_id = c.com_code
 			      $where
-			      Order by c.postcount desc
+			      ORDER by c.postcount desc
 			      LIMIT $pagesnum");
 	}
 

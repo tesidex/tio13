@@ -13,7 +13,7 @@
  * @package block
  * @version 0.9.13
  * @author tesidex Team
- * @copyright Copyright (c) tesidex 2008-2013
+ * @copyright Copyright (c) tesidex 2012-2013
  * @license BSD
  */
 require_once cot_incfile('page', 'module');

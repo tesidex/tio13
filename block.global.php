@@ -22,11 +22,11 @@ function blockrecent($mode, $pagesnum = 5) {
     global $db, $structure, $db_news, $db_users, $sys, $cfg, $L, $cot_extrafields, $usr, $cache;
 
 
-//	if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0)
-//		{
-//			$ri_cache_id = "$theme.$lang.news";
-//			$string = $cache->disk->get($ri_cache_id, 'block', (int) $cfg['plugin']['block']['cache_ttl']);
-//		}
+	if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0)
+		{
+			$ri_cache_id = "$theme.$lang.block_recent";
+			$string = $cache->disk->get($ri_cache_id, 'block', (int) $cfg['plugin']['block']['cache_ttl']);
+		}
     if (empty($string)) {
 	$where = "WHERE new_state=0 
 			  AND new_begin <= {$sys['now']} 
@@ -71,7 +71,7 @@ function blockrecent($mode, $pagesnum = 5) {
 			    'c=' . $row['new_cat'] . '&id=' . $row['new_id']) . '>' . $row['new_title'] . '</a></h3></li>';
 	}
 	if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
-//				$cache->disk->store($ri_cache_id, $string, 'block');
+				$cache->disk->store($ri_cache_id, $string, 'block');
 	}
     }
     return $string;

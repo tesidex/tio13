@@ -67,7 +67,7 @@ foreach ($cats as $k => $v) {
 
     // Cache for guests
     if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
-	$block_cache_id = "$theme.$lang.$cat." . $v[3]['d']; // Includes theme, lang, category and current page
+	$block_cache_id = "$theme.$lang.block_page.$cat." . $v[3]['d']; // Includes theme, lang, category and current page
 	$block_html = $cache->disk->get($block_cache_id, 'block',
 		(int) $cfg['plugin']['block']['cache_ttl']);
 	if (!is_null($block_html)) {
@@ -197,7 +197,7 @@ $categories = explode(',', $cfg['plugin']['block']['category']);
 $catn = 1; 
 $jj = 0;
 $cats = array();
-unset($c,$block_html);
+unset($c,$block_html,$block_cache_id);
 
 foreach ($categories as $v) {
     $v = explode('|', trim($v));
@@ -223,7 +223,7 @@ foreach ($cats as $k => $v) {
     $tagname = str_replace(array(' ', ',', '.', '-'), '_', strtoupper($v[0]));
     // Cache for guests
     if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
-	$block_cache_id = "$theme.$lang.$cat." . $v[3]['d']; // Includes theme, lang, category and current page
+	$block_cache_id = "$theme.$lang.block_new.$cat." . $v[3]['d']; // Includes theme, lang, category and current page
 	$block_html = $cache->disk->get($block_cache_id, 'block',
 		(int) $cfg['plugin']['block']['cache_ttl']);
 	if (!is_null($block_html)) {
@@ -333,9 +333,9 @@ foreach ($cats as $k => $v) {
     $block->parse('BLOCK');
     $block_html = $block->text('BLOCK');
     // Cache for guests
-//    if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
-//	$cache->disk->store($block_cache_id, $block_html, 'block');
-//    }
+    if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
+	$cache->disk->store($block_cache_id, $block_html, 'block');
+    }
     $t->assign(($catn == 0) ? 'INDEX_BLOCK' : 'INDEX_BLOCK_' . $tagname,
 	    $block_html);
     $catn++;
@@ -359,7 +359,7 @@ $cats = array(
 	    'pg' => (int) 1)
     )
 );
-unset($c,$block_html);
+unset($c,$block_html,$block_cache_id);
 
 //cot_print($cats);
 foreach ($cats as $k => $v) {
@@ -369,7 +369,7 @@ foreach ($cats as $k => $v) {
     $tagname = 'TABS';
     // Cache for guests
     if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
-	$block_cache_id = "$theme.$lang.$cat." . $v[3]['d']; // Includes theme, lang, category and current page
+	$block_cache_id = "$theme.$lang.block_tabs.$cat." . $v[3]['d']; // Includes theme, lang, category and current page
 	$block_html = $cache->disk->get($block_cache_id, 'block',
 		(int) $cfg['plugin']['block']['cache_ttl']);
 	if (!is_null($block_html)) {

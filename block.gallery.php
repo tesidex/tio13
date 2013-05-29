@@ -21,10 +21,16 @@ global $db;
 $image1 = $db->query("SELECT page_avatar FROM cot_pages
 		      WHERE page_avatar IS NOT NULL AND page_cat = 'gallery' AND page_state = 0")->fetchColumn();
 
+if(empty($image1)) cot_error ('Image1 not found','block.gallery');
+
 $image2 = $db->query("SELECT page_avatar FROM cot_pages
 		      WHERE page_avatar IS NOT NULL AND page_cat = 'gallery' AND page_state = 0")->fetchColumn();
 
-//TODO catch if no image
+if(empty($image2)) cot_error ('Image2 not found','block.gallery');
+
+
+if(!cot_error_found())
+{
 $gallery = new XTemplate(cot_tplfile("block.gallery",'plug'));
 $gallery->assign(array(
     'GALLERY_IMAGE1'=> $image1,
@@ -34,4 +40,5 @@ $gallery->parse('GALLERY');
 $gallery_html = $gallery->text('GALLERY');
 
 
-$t->assign('INDEX_GALLERY', $gallery_html);
+$t->assign('INDEX_BLOCK_GALLERY', $gallery_html);
+}

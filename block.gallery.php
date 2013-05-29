@@ -8,12 +8,12 @@ Tags=index.tpl:{GALLERY_PICS}
 ==================== */
 
 /**
- * block admin usability modification
+ * block GALLERY usability modification
  *
  * @package block
- * @version 0.7.0
- * @author Cotonti Team
- * @copyright Copyright (c) Cotonti Team 2008-2013
+ * @version 0.9.13
+ * @author tesidex Team
+ * @copyright Copyright (c) tesidex 2012-2013
  * @license BSD
  */
 
@@ -24,7 +24,7 @@ $image1 = $db->query("SELECT page_avatar FROM cot_pages
 $image2 = $db->query("SELECT page_avatar FROM cot_pages
 		      WHERE page_avatar IS NOT NULL AND page_cat = 'gallery' AND page_state = 0")->fetchColumn();
 
-
+//TODO catch if no image
 $gallery = new XTemplate(cot_tplfile("block.gallery",'plug'));
 $gallery->assign(array(
     'GALLERY_IMAGE1'=> $image1,

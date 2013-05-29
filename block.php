@@ -25,7 +25,7 @@ list($pg, $d, $durl) = cot_import_pagenav('d',
 $c = cot_import('c', 'G', 'TXT');
 $c = (!isset($structure['page'][$c])) ? '' : $c;
 
-$cfg['plugin']['block']['category'] = 'blogs|4|150,newspaper|4|150';
+$cfg['plugin']['block']['category'] = 'blogs|4|150,newspaper|2|400,expertise|1|250,calendar|1|250';
 $categories = explode(',', $cfg['plugin']['block']['category']);
 $jj = 0;
 $cats = array();
@@ -197,7 +197,7 @@ $categories = explode(',', $cfg['plugin']['block']['category']);
 $catn = 1; 
 $jj = 0;
 $cats = array();
-unset($c);
+unset($c,$block_html);
 
 foreach ($categories as $v) {
     $v = explode('|', trim($v));
@@ -333,9 +333,9 @@ foreach ($cats as $k => $v) {
     $block->parse('BLOCK');
     $block_html = $block->text('BLOCK');
     // Cache for guests
-    if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
-	$cache->disk->store($block_cache_id, $block_html, 'block');
-    }
+//    if ($usr['id'] == 0 && $cache && (int) $cfg['plugin']['block']['cache_ttl'] > 0) {
+//	$cache->disk->store($block_cache_id, $block_html, 'block');
+//    }
     $t->assign(($catn == 0) ? 'INDEX_BLOCK' : 'INDEX_BLOCK_' . $tagname,
 	    $block_html);
     $catn++;
@@ -359,7 +359,7 @@ $cats = array(
 	    'pg' => (int) 1)
     )
 );
-unset($c);
+unset($c,$block_html);
 
 //cot_print($cats);
 foreach ($cats as $k => $v) {

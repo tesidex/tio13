@@ -3,7 +3,7 @@
 /* ====================
 [BEGIN_COT_EXT]
 Hooks=index.tags
-Tags=index.tpl:{GALLERY_PICS}
+Tags=index.tpl:{INDEX_BLOCK_GALLERY}
 [END_COT_EXT]
 ==================== */
 
@@ -38,7 +38,7 @@ $gallery->assign(array(
 ));
 $gallery->parse('GALLERY');
 $gallery_html = $gallery->text('GALLERY');
-
+//cot_print($gallery);
 
 $t->assign('INDEX_BLOCK_GALLERY', $gallery_html);
 }

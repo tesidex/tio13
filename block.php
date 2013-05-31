@@ -51,10 +51,14 @@ foreach ($categories as $v) {
 }
 //cot_print($cats);
 
-///* === Hook - Part1 : Set === FIRST === */
-//$block_first_extp = cot_getextplugins('block.first');
-///* === Hook - Part1 : Set === LOOP === */
-//$block_extp = cot_getextplugins('block.loop');
+/* === Hook - Page : Set === FIRST === */
+$block_first_extp = cot_getextplugins('block.page.first');
+/* === Hook - New : Set === FIRST === */
+$block_first_extn = cot_getextplugins('block.new.first');
+/* === Hook - Page : Set === LOOP === */
+$block_extp = cot_getextplugins('block.page.loop');
+/* === Hook - New : Set === LOOP === */
+$block_extn = cot_getextplugins('block.new.loop');
 ///* === Hook - Part1 : Set === TAGS === */
 //$block_tags_extp = cot_getextplugins('block.tags');
 ///* ===== */
@@ -86,7 +90,7 @@ foreach ($cats as $k => $v) {
     $block_join_tables = '';
 
 	/* === Hook === */
-	foreach (cot_getextplugins('block.page.first') as $pl)
+	foreach ($block_first_extp as $pl)
 	{
 		include $pl;
 	}
@@ -141,7 +145,7 @@ foreach ($cats as $k => $v) {
 
 
 	/* === Hook === */
-	foreach (cot_getextplugins('block.page.loop') as $pl)
+	foreach ($block_extp as $pl)
 	{
 		include $pl;
 	}
@@ -242,7 +246,7 @@ foreach ($cats as $k => $v) {
     $block_join_tables = '';
 
 	/* === Hook === */
-	foreach (cot_getextplugins('block.new.first') as $pl)
+	foreach ($block_first_extn as $pl)
 	{
 		include $pl;
 	}
@@ -296,7 +300,7 @@ foreach ($cats as $k => $v) {
 	$block->assign(cot_generate_usertags($pag, 'PAGE_ROW_OWNER_'));
 
 	/* === Hook === */
-	foreach (cot_getextplugins('block.new.loop') as $pl)
+	foreach ($block_extn as $pl)
 	{
 		include $pl;
 	}
@@ -379,7 +383,7 @@ foreach ($cats as $k => $v) {
     }
 
     $catsub = cot_structure_children('new', $cat);
-    $where = "new_state = 0 AND new_cat <> 'system' AND new_begin <= {$sys['now']} AND (new_expire = 0 OR new_expire > {$sys['now']}) AND new_cat IN ('" . implode("','",
+    $where = "new_state = 0 AND new_main = 1 AND new_cat <> 'system' AND new_begin <= {$sys['now']} AND (new_expire = 0 OR new_expire > {$sys['now']}) AND new_cat IN ('" . implode("','",
 		    $catsub) . "')";
     //TODO добавить в where "is_main" 
 

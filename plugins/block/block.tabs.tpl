@@ -3,29 +3,25 @@
 <div class="row">
     <div class="span8 IDX_news">
 
-	<ul class="nav nav-tabs" id="myTab">
-
+	<ul class="nav nav-tabs" id="IDXTabs">
 	    <!-- BEGIN: TABS_ROW -->
 	    <li>
-		<a data-toggle="tab" href="#{TABS_ROW_ID}" title="{TABS_ROW_SHORTTITLE}"><span>{TABS_ROW_SHORTTITLE}</span></a>
+		<a data-toggle="tab" href="#{TABS_ROW_ID}" title="{TABS_ROW_SHORTTITLE}">
+		    <h3>{TABS_ROW_SHORTTITLE}</h3>
+		</a>
 	    </li>
-
 	    <!-- END: TABS_ROW -->
-
 	</ul>
+		
     </div>
 </div>
 
 <div class="row">
     <div class="span8">
-	<div class="tab-content padding10">
+	<div class="tab-content">
 	    <!-- BEGIN: PAGE_ROW -->
 
-	    <div id="{PAGE_ROW_ID}" class="IDX_article tab-pane"
-	    <!-- IF {PHP.jj} == 1 -->
-		     class="active" 
-	    <!-- ENDIF -->
-		  >
+	    <div id="{PAGE_ROW_ID}" class="IDX_article tab-pane">
 
 		<!-- IF {PAGE_ROW_AVATAR|mb_strstr($this,'page_')} -->
                 <img class="pull-left marginright10" src="./datas/photos/thumb_{PAGE_ROW_AVATAR}" alt="" width="250" height="188">
@@ -44,13 +40,5 @@
 	</div>
     </div>
 </div>
-
-<script>
-
-$(function () {
-    $('#myTab a:first').tab('show');
-})
-</script>
-
 
 <!-- END: BLOCK -->

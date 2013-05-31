@@ -3,7 +3,7 @@ body {
   height: 100%;
   color: #626262;
   font-family: 'Istok Web', Verdana, Geneva, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
 }
 #logo>h1 { background: url('../img/logo.png') no-repeat center left; height: 62px; width: 201px; }
 #logo>h1 a    { display: block; height: 60px; }
@@ -81,29 +81,30 @@ nav {
 #sidebar li a:hover  { text-decoration: none; color: #1a3a74; }
 
 .popular        { background: #626262; width: 100%; color: #fff; }
-.popular h2     { font-size: 12px; width: auto; margin: 0; padding: 10px; }
-.popular h2 a   { color: #fff; text-transform: uppercase; }
-.popular h2 a:hover     { text-decoration: none; }
+.popular a:hover h2      { text-decoration: none; }
 .popular h3             { line-height: 1em; margin: 0; }
 .popular h3 a           { color: #fff; font-weight: normal; line-height: 1em; font-size: 12px; }
 .popular h3 a:hover     { text-decoration: none; color: #fff; }
 .popular ul             { list-style: none; padding: 0px; margin: 0; }
-.popular li section     { border-bottom: 1px solid #b2b2b2; padding: 7px; width: 94%; }
-.popular li section:last-child    { border-bottom: none !important; }
-.popular span             { clear: both; float: none; }
-#popular section p        { display: none; }
-#discuss section p        { display: none; }
-#popular    { padding-bottom: 20px; }
-#discuss    { padding-bottom: 20px; }
+.popular li      { border-bottom: 1px solid #b2b2b2; padding: 7px; width: 94%; }
+.popular li:last-child    { border-bottom: none !important; }
+.popular span             { color: #c3cee4; }
+#TABS1      { width: 100%; padding: 0; margin: 10px 0 0; }
+#TABS1 li   { margin: 0; }
+#TABS1 a    {display: block; width: auto; }
+#TABS1 a:hover  { text-decoration: none; }
+#TABS1 h2   { background: #eff0f2; color: #a7a7a7; text-transform: uppercase; font-size: 12px; width: auto; margin: 0; padding: 10px; line-height: 10px; }
+#TABS1 > .active > a > h2, #TABS1 > .active > a > h2:hover { background: #626262; color: #fff; text-decoration: none; }
 
-.IDX_news ul    { background: #f7f7f7; min-height: 80px; display: block; margin: 0; width: 100%; }
+
+.IDX_news ul    { background: #f7f7f7; min-height: 85px; display: block; margin: 0; width: 100%; margin-bottom: 1px; }
 .IDX_news li         {
     border-right: 1px solid #dddddd;
     background: #f7f7f7;
     height: 85px; 
-    margin: 0px;
+    margin-right: 1px;
     float: left;
-    width: 24.8%;
+    width: 24.6%;
     
     }
 .IDX_news li a { 
@@ -116,11 +117,19 @@ nav {
     padding: 20px;
     height: 50px;
 }   
-.nav-tabs > .active > a, .nav-tabs > .active > a:hover { background: #1a3a75; color: #fff; border-color: #1a3a75; text-decoration: none; display: block; }
-#myTab a:hover  { background: #1a3a75; }
-#myTab a:hover span     { color: #fff; }
-#myTab a span   {overflow: hidden; }
-#myTab a:hover:after, .active > a:after  {
+#IDXTabs > .active > a, #IDXTabs > .active > a:hover { background: #1a3a75; color: #fff; border-color: #1a3a75; text-decoration: none; display: block; }
+#IDXTabs a:hover  { background: #1a3a75; }
+#IDXTabs a h3   { 
+    color: #404040;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+#IDXTabs a:hover h3   { color: #fff; }
+#IDXTabs > .active > a h3, #IDXTabs > .active > a:hover h3 { color: #fff !important; }
+#IDXTabs a:hover:after, #IDXTabs > .active > a:after  {
    content: "";
    position: absolute;
    top: 100%;
@@ -131,7 +140,7 @@ nav {
    border-right: 6px solid transparent;
    }
 .IDX_news li:last-child { border: none; }
-#myTab > .tab-content { background: #eff0f2; }
+#IDXTabs > .tab-content { background: #eff0f2; }
 .IDX_article    { background: #eff0f2; min-height: 190px; padding: 10px; font-size: 13px; line-height: 1.2em; }
 .date           { color: #1a3a75; }
 
@@ -164,16 +173,18 @@ nav {
     padding-left: 20px; 
     text-decoration: underline;
 }
+.newsdetails { color: #B2B2B2; font-size: 12px; }
 .theme                  { font-size: 13px; text-decoration: underline; }
 .IDX_blocks2            { color: #404040; font-size: 12px; } 
-.IDX_blocks2 h2         { font-size: 1.2em; border-bottom: 2px solid #626262; }
+.IDX_blocks2 h2         { font-size: 1.2em; border-bottom: 2px solid #626262; padding-bottom: 4px; }
 .IDX_blocks2 h2 a       { color: #1a3a74; }
 .IDX_blocks2 h2 a:hover { text-decoration: none; }
-.IDX_blocks2 h3         { margin: 0; line-height: 10px; font-weight: normal; }
+.IDX_blocks2 h3         { margin: 0; line-height: 10px; font-weight: normal; display: inline; }
 .IDX_blocks2 h3 a       { font-size: 12px; color: #1A3A75; }
-.IDX_blocks2 section    { border-bottom: 1px solid #e2e2e2; margin-top: 10px; }
+.IDX_blocks2 h4         { color: #404040; font-size: 12px; font-weight: normal; line-height: 1em; margin: 0; }
+.IDX_blocks2 section    { border-bottom: 1px solid #e2e2e2; margin-top: 10px; padding-bottom: 10px; }
 .IDX_blocks2 section:last-child { border: none; }
-.newspaper h3           { color: #B2B2B2; text-decoration: underline; font-size: 1.2em; }
+.newspaper h3           { color: #B2B2B2; text-decoration: underline; font-size: 1.2em; display: inline; }
 .IDX_tabs ul            { list-style: none; margin: 0 0 10px 0; display: inline-block; }
 .IDX_tabs li            { float: left; border-right: 1px solid #9f9f9f; }
 .IDX_tabs li a          { text-decoration: underline; padding: 9px 10px; color: #9f9f9f; }
@@ -198,6 +209,7 @@ nav {
 .comment p              { margin: 0; font-style: italic; }
 .PAGE_soc_buttons span  { margin-right: -5px; }
 .editdate select        { width: auto; }
+.gallery h3             { color: #404040; font-size: 12px; font-weight: normal; line-height: 1em; margin: 0; }
 /* 4. Footer
 -------------------------------------------------- */
 footer          { color: #fff; padding: 15px; background: #626262; height: auto; }
@@ -213,11 +225,11 @@ footer h2 {
 }
 .FT_navigator       { background: #eff0f2; margin-top: 40px; }
 .FT_navigator h3    { font-size: 16px; color: #1a3a74; }
-.FT_navigator a     { font-size: 12px; text-decoration: underline; line-height: 1.6em; }
+.FT_navigator a     { font-size: 12px; text-decoration: underline; line-height: 1.8em; }
 footer ul           { list-style: none; margin: 0; }
 footer li           { color: #fff; text-decoration: underline; padding-right: 20px; float: left; line-height: 3em; }
 footer li a:hover   { color: #fff; }
-footer p            { color: #b2b2b2; font-size: 12px; clear: left; }
+footer p            { color: #b2b2b2; font-size: 12px; clear: left; margin: 0; }
 
 .bottomline a {
   color: #ccc;

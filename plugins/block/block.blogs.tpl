@@ -15,7 +15,6 @@
                         <!-- ELSE -->
                         <img src="http://tio.by/uploads/fields_files/{PAGE_ROW_AVATAR}" alt="">
                         <!-- ENDIF -->
-                        <img src="./datas/photos/thumb_{PAGE_AVATAR}" alt="">
                     </a>
                 </div>
                 <!-- ENDIF -->

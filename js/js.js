@@ -1,4 +1,4 @@
 $(document).ready(function() {
-//    $('#myTab a[href="#popular"]').tab('show');
-//    $('#myTab a[href="#discuss"]').tab('show');
+    $('#IDXTabs a:first').tab('show');
+    $('#TABS1 a:last').tab('show');
 });

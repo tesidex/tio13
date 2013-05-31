@@ -1,6 +1,6 @@
 <!-- BEGIN: MAIN -->
 <div class="row margintop10">
-    <div class="span4_left">
+    <aside class="span4_left">
         <div>
             <h3>Поиск по сайту:</h3>
             <form id="search" action="{PHP|cot_url('plug','e=search')}" method="post" class="form-search" >
@@ -25,50 +25,24 @@
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner2.jpg" alt="" width="240" height="200" />
         </div>
-        <aside class="margintop10 popular">
-            <h2 class="pull-left"><a href="#"><span>Популярное</span></a></h2>
-            <h2 class="pull-right inactive"><a href="#"><span>Обсуждаемое</span></a></h2>
-            <ul class="hidden">
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
+        <div class="">
+            <ul class="nav-tabs" id="TABS1">
+                <li><a href="#popular" data-toggle="tab"><h2>Популярное</h2></a></li>
+                <li><a href="#discuss" data-toggle="tab"><h2>Обсуждаемое</h2></a></li>
             </ul>
-            <ul>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-            </ul>
-        </aside>
+            <div class="tab-content popular">
+                <ul class="tab-pane active" id="popular">
+                    {PHP|blockrecent('popular',10)}
+               </ul>
+                <ul class="tab-pane" id="discuss">
+                    {PHP|blockrecent('discuss',5)}
+               </ul>
+            </div>
+        </div>
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
         </div>
-    </div>
+    </aside>
     <div class="span8">
         <div class="row">
             <article class="span8">
@@ -108,7 +82,7 @@
                                 <p class="pull-left">{NEW_DATE_STAMP|cot_date('d.m.Y', $this)}</p> &#160;- <span class="breadcrumbs blue">{NEW_TITLE}</span>
 
                                 <h2>{NEW_SHORTTITLE}</h2>
-                                <div class="NEW_soc_buttons">
+                                <div class="PAGE_soc_buttons">
                                     <p class="em">Поделиться:</p>
                                     <span class='st_vkontakte' displayText=''></span>
                                     <span class='st_facebook' displayText=''></span>

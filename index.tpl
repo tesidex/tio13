@@ -4,7 +4,7 @@
 //    element.className = element.className + "active";
 </script>
 <div class="row margintop10">
-    <div class="span4_left">
+    <aside class="span4_left">
         <div>
             <h3>Поиск по сайту:</h3>
             <form id="search" action="{PHP|cot_url('plug','e=search')}" method="post" class="form-search" >
@@ -29,24 +29,24 @@
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner2.jpg" alt="" width="240" height="200" />
         </div>
-        <aside class="margintop10 popular" id="TABS1">
-            <ul class="nav-tabs">
-                <li><h2><a href="#popular" data-toggle="tab"><span>Популярное</span></a></h2></li>
-                <li><h2><a href="#discuss" data-toggle="tab"><span>Обсуждаемое</span></a></h2></li>
+        
+            <ul class="nav-tabs" id="TABS1">
+                <li><a href="#popular" data-toggle="tab"><h2>Популярное</h2></a></li>
+                <li><a href="#discuss" data-toggle="tab"><h2>Обсуждаемое</h2></a></li>
             </ul>
-            <div class="tab-content">
-                <ul class="tab-pane active" id="popular">
+            <div class="tab-content popular">
+                <ul class="tab-pane" id="popular">
                     {PHP|blockrecent('popular',10)}
                </ul>
                 <ul class="tab-pane" id="discuss">
                     {PHP|blockrecent('discuss',5)}
                </ul>
             </div>
-        </aside>
+        
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
         </div>
-    </div>
+    </aside>
 
     <div class="span8">
 	
@@ -76,21 +76,15 @@
             </article>
             <article class="span4">
                 <h2><a href="#">Клуб путешественников</a></h2>
-                <div class="pull-left width50">
-                    <img src="themes/{PHP.theme}/img/IDX_block2.jpg" alt="" width="162" height="132" />
-                    <a href="#">Сувенирщики</a>
-                </div>
-                <div class="pull-right width50">
-                    <img class="pull-right textright" src="themes/{PHP.theme}/img/IDX_block3.jpg" alt="" width="162" height="132" />
-                    <a href="#">Санкт-Петербург</a>
-                </div>
+                {INDEX_BLOCK_GALLERY}
             </article>
             <article class="span4">
                 <h2><a href="#">Экспертиза</a></h2>
-                <img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block.jpg" alt="" width="90" height="70" />
+                {INDEX_BLOCK_EXPERTISE}
+                <!--<img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block.jpg" alt="" width="90" height="70" />
                 <h3><a href="#">Тема: <span class="theme">Как устроиться аниматором?</span></a></h3>
                 <div>“На форум нашего сайта пришел вопрос от читателя, желающего поработать аниматором. О том, насколько легко найти подобную работу, кто из туроператоров обучает и трудоустраивает «массовиков-затейников», а также сколько можно заработать на пляжах Турции и Египта – в нашем обзоре.”
-                </div>
+                </div>-->
             </article>
         </div>
 

@@ -1,6 +1,6 @@
 <!-- BEGIN: MAIN -->
     <div class="row margintop10">
-    <div class="span4_left">
+    <aside class="span4_left">
         <div>
             <h3>Поиск по сайту:</h3>
             <form id="search" action="{PHP|cot_url('plug','e=search')}" method="post" class="form-search" >
@@ -16,7 +16,7 @@
                 <li><a href="#">Каталог агроусадеб Беларуси</a></li>
                 <li><a href="#">Дикая природа Беларуси</a></li>
                 <li><a href="#">Портал PHOTO.BY</a></li>
-                <li class="no-border"><a href="#">Авиабилеты</a></li>
+                <li><a href="#">Авиабилеты</a></li>
             </ul>
         </nav>
         <div class="margintop10">
@@ -25,97 +25,87 @@
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner2.jpg" alt="" width="240" height="200" />
         </div>
-        <aside class="margintop10 popular">
-            <h2>Популярное</h2>
-            <ul>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li>
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
-                <li class="no-border">
-                    <p class="grey">13.06.2013</p>
-                    <p>Национальный аэропорт «Минск» временно закрыт по метеоусловиям! Задержан прилет восьми рейсов!</p>
-                </li>
+        <div class="">
+            <ul class="nav-tabs" id="TABS1">
+                <li><a href="#popular" data-toggle="tab"><h2>Популярное</h2></a></li>
+                <li><a href="#discuss" data-toggle="tab"><h2>Обсуждаемое</h2></a></li>
             </ul>
-        </aside>
+            <div class="tab-content popular">
+                <ul class="tab-pane active" id="popular">
+                    {PHP|blockrecent('popular',10)}
+               </ul>
+                <ul class="tab-pane" id="discuss">
+                    {PHP|blockrecent('discuss',5)}
+               </ul>
+            </div>
+        </div>
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
         </div>
-    </div>
+    </aside>
       <div class="span8">
-          <!-- BEGIN: PAGE_ADMIN -->
-          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#admin-page-options">
-            {PHP.L.Administration}&nbsp;&nbsp;&nbsp;<i class="icon-circle-arrow-down icon-white"></i>
-          </button>
-          <div id="admin-page-options" class="collapse" style="margin-bottom: 10px;">
-            <ul class="unstyled">
-              <!-- IF {PHP.usr.isadmin} -->
-              <li><a href="{PHP|cot_url('admin')}">{PHP.L.Adminpanel}</a></li>
-              <!-- ENDIF -->
-              <li><a href="{PAGE_CAT|cot_url('page','m=add&c=$this')}">{PHP.L.page_addtitle}</a></li>
-              <li>{PAGE_ADMIN_UNVALIDATE}</li>
-              <li>{PAGE_ADMIN_EDIT}</li>
-              <li>{PAGE_ADMIN_DELETE}</li>
-            </ul>
-          </div>
-        <!-- END: PAGE_ADMIN -->
-        <span class="breadcrumbs">{PAGE_TITLE}</span>
-        <h3>{PAGE_SHORTTITLE}</h3>
-          <!-- IF {PAGE_DESC} -->
-            <div class="newsdesc">{PAGE_DESC}</div>
-          <!-- ENDIF -->
-          <p>{PAGE_TEXT}</p>
-          <br />
-          <div class="well well-small">
-            <strong>{PHP.L.Tags}: </strong>
-            <!-- BEGIN: PAGE_TAGS_ROW -->
-              <!-- IF {PHP.tag_i} > 0 -->, <!-- ENDIF --><a href="{PAGE_TAGS_ROW_URL}" title="{PAGE_TAGS_ROW_TAG}" rel="nofollow">{PAGE_TAGS_ROW_TAG}</a>
-            <!-- END: PAGE_TAGS_ROW -->
-            <!-- BEGIN: PAGE_NO_TAGS -->
-              {PAGE_NO_TAGS}
-            <!-- END: PAGE_NO_TAGS -->
-          </div>
-          <hr class="contentdivider" />
-          {PAGE_COMMENTS_DISPLAY}
-      </div>
-      <div class="span4 rightcol">
-        <!-- IF {PAGE_AVATAR} -->
-        <div class="hidden-phone">
-          <a href="{PAGE_URL}" class="thumbnail">
-            <img src="./datas/photos/thumb_{PAGE_AVATAR}" alt="">
-          </a>
-        </div>
-        <!-- ENDIF -->
-        <h3>{PHP.L.blogster_pageinfo}</h3>
-        <ul class="unstyled">
-          <!-- IF {PAGE_AUTHOR} --><li>{PHP.L.blogster_author}: {PAGE_AUTHOR}</li><!-- ENDIF -->
-          <li>{PHP.L.blogster_postedon}: {PAGE_DATE_STAMP|cot_date('l jS M Y', $this)}</li>
-          <li>{PHP.L.Views}: {PAGE_COUNT}</li>
-          <!-- IF {PAGE_COMMENTS_COUNT} > 0 --><li>{PHP.L.comments_comments}: {PAGE_COMMENTS_COUNT}</li><!-- ENDIF -->
-        </ul>
-        <hr />
-        <!-- BEGIN: PAGE_FILE -->
-          <h3>{PHP.L.Download}</h3>
-          <!-- BEGIN: MEMBERSONLY -->
-            <h4 class="muted" title="{PHP.L.MembersOnly}">{PAGE_FILE_ICON}&nbsp;{PAGE_SHORTTITLE} <small>({PHP.L.blogster_membersonly})</small></h4>
-          <!-- END: MEMBERSONLY -->
-          <!-- BEGIN: DOWNLOAD -->
-            <h4>{PAGE_FILE_ICON}&nbsp;<a href="{PAGE_FILE_URL}">{PAGE_SHORTTITLE}</a></h4>
-          <!-- END: DOWNLOAD -->
-          <ul class="unstyled">
-            <li>{PHP.L.Filesize}: {PAGE_FILE_SIZE}{PHP.L.kb}</li>
-            <li>{PHP.L.Downloaded}: {PAGE_FILE_COUNT}</li>
-          </ul>
-          <hr />
-        <!-- END: PAGE_FILE -->
+        <article class="span8">
+                <div class="row">
+                    <!-- IF {PAGE_AVATAR} -->
+                    <div class="span4">
+                        <div>
+                            <a href="{PAGE_URL}">
+                                <!-- IF {PAGE_AVATAR|mb_strstr($this,'page_')} -->
+                                <img src="./datas/photos/thumb_{PAGE_AVATAR}" alt="">
+                                <!-- ELSE -->
+                                <img src="http://tio.by/uploads/fields_files/{PAGE_AVATAR}" alt="">
+                                <!-- ENDIF -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <!-- ELSE -->
+                        <div class="span8">
+                            <!-- ENDIF -->
+                            <!-- BEGIN: PAGE_ADMIN -->
+                            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#admin-page-options">
+                                {PHP.L.Administration}&nbsp;&nbsp;&nbsp;<i class="icon-circle-arrow-down icon-white"></i>
+                                </button>
+                                <div id="admin-page-options" class="collapse" style="margin-bottom: 10px;">
+                                    <ul class="unstyled">
+                                        <!-- IF {PHP.usr.isadmin} -->
+                                        <li><a href="{PHP|cot_url('admin')}">{PHP.L.Adminpanel}</a></li>
+                                        <!-- ENDIF -->
+                                        <li><a href="{PAGE_CAT|cot_url('page','m=add&c=$this')}">{PHP.L.page_addtitle}</a></li>
+                                        <li>{PAGE_ADMIN_UNVALIDATE}</li>
+                                        <li>{PAGE_ADMIN_EDIT}</li>
+                                        <li>{PAGE_ADMIN_DELETE}</li>
+                                    </ul>
+                                </div>
+                                <!-- END: PAGE_ADMIN -->
+                                <p class="pull-left">{PAGE_DATE_STAMP|cot_date('d.m.Y', $this)}</p> &#160;- <span class="breadcrumbs blue">{PAGE_TITLE}</span>
+
+                                <h2>{PAGE_SHORTTITLE}</h2>
+                                <div class="PAGE_soc_buttons">
+                                    <p class="em">Поделиться:</p>
+                                    <span class='st_vkontakte' displayText=''></span>
+                                    <span class='st_facebook' displayText=''></span>
+                                    <span class='st_livejournal' displayText=''></span>
+                                    <span class='st_plusone' displayText=''></span>
+                                    <span class='st_twitter' displayText=''></span>
+                                    <span class='st_odnoklassniki' displayText=''></span>
+                                    <span class='st_mail_ru' displayText=''></span>
+                                    <span class='st_friendfeed' displayText=''></span>    
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span8">
+                                <!-- IF {PAGE_DESC} -->
+                                <div class="strong marginbottom20">{PAGE_DESC}</div>
+                                <!-- ENDIF -->
+                                <p>{PAGE_TEXT}</p>
+
+                                <p>{PAGE_COMMENTS_DISPLAY}</p>
+                            </div>
+                        </div>
+                </article>
+          
         
         <!-- BEGIN: PAGE_MULTI -->
           <h3>{PHP.L.Summary}:</h3>

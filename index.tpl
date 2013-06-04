@@ -41,9 +41,13 @@
                     {PHP|blockrecent('discuss',5)}
                </ul>
             </div>
-        
+
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
+        </div>
+
+        <div class="margintop10">
+            {INDEX_BLOCK_COMPANY_NEWS}
         </div>
     </aside>
 
@@ -54,14 +58,8 @@
 
         <div class=" row IDX_blocks">
             <article class="span4 hot">
-                <h2><a href="#">Горячие предложения</a></h2>
-                <p><img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block.jpg" alt="" width="90" height="70" />
-                    Лето-2013! Бронируй сейчас! - 30% на Болгарию, Грецию, Турцию, Италию 
-                </p>
-                <p class="no-border"><img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block.jpg" alt="" width="90" height="70" />
-                    Лето-2013! Бронируй сейчас! - 30% на Болгарию, Грецию, Турцию, Италию 
-                </p>
-                <a href="#" class="hot_more">Смотреть больше предложений</a>
+                <h2><a href="{PHP|cot_url('page', 'c=calendar')}">Горячие события</a></h2>
+                {INDEX_BLOCK_CALENDAR}
             </article>
             <article class="span4">
                 <h2><a href="#">Мнение</a></h2>

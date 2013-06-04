@@ -80,15 +80,15 @@ nav {
 #sidebar li a    { color: #626262; text-decoration: none; font-size: 12px; display: block; padding: 10px 20px; }
 #sidebar li a:hover  { text-decoration: none; color: #1a3a74; }
 
-.popular        { background: #626262; width: 100%; color: #fff; }
-.popular a:hover h2      { text-decoration: none; }
-.popular h3             { line-height: 1em; margin: 0; }
-.popular h3 a           { color: #fff; font-weight: normal; line-height: 1em; font-size: 12px; }
-.popular h3 a:hover     { text-decoration: none; color: #fff; }
-.popular ul             { list-style: none; padding: 0px; margin: 0; }
-.popular li      { border-bottom: 1px solid #b2b2b2; padding: 7px; width: 94%; }
-.popular li:last-child    { border-bottom: none !important; }
-.popular span             { color: #c3cee4; }
+.aside_popular        { background: #626262; width: 100%; color: #fff; }
+.aside_popular a:hover h2      { text-decoration: none; }
+.aside_popular h3             { line-height: 1em; margin: 0; display: inline; }
+.aside_popular h3 a           { color: #fff; font-weight: normal; line-height: 1em; font-size: 12px; }
+.aside_popular h3 a:hover     { text-decoration: none; color: #fff; }
+.aside_popular ul             { list-style: none; padding: 0px; margin: 0; }
+.aside_popular li      { border-bottom: 1px solid #b2b2b2; padding: 7px; width: 94%; }
+.aside_popular li:last-child    { border-bottom: none !important; }
+.aside_popular span             { color: #c3cee4; }
 #TABS1      { width: 100%; padding: 0; margin: 10px 0 0; }
 #TABS1 li   { margin: 0; }
 #TABS1 a    {display: block; width: auto; }
@@ -210,6 +210,12 @@ nav {
 .PAGE_soc_buttons span  { margin-right: -5px; }
 .editdate select        { width: auto; }
 .gallery h3             { color: #404040; font-size: 12px; font-weight: normal; line-height: 1em; margin: 0; }
+.expertise p            { margin: 0; text-decoration: none;  font-size: 12px;
+    font-weight: normal;
+    line-height: 1em; color: #626262; border: medium none;
+    height: auto;
+    margin: 0;
+    text-decoration: none; }
 /* 4. Footer
 -------------------------------------------------- */
 footer          { color: #fff; padding: 15px; background: #626262; height: auto; }

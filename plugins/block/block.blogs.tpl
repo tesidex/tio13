@@ -1,9 +1,7 @@
 <!-- BEGIN: BLOCK -->
 
 <!-- BEGIN: PAGE_ROW -->
-
-<div class="span4">
-    <article>
+    <article class="span4">
     <div class="row-fluid">
         
             <div class="span3 margin0">
@@ -11,9 +9,9 @@
                 <div>
                     <a href="{PAGE_ROW_URL}">
                         <!-- IF {PAGE_ROW_AVATAR|mb_strstr($this,'page_')} -->
-                        <img src="./datas/photos/thumb_{PAGE_ROW_AVATAR}" alt="">
+                        <img src="./datas/photos/thumb_{PAGE_ROW_AVATAR}" alt="" width="90" height="70">
                         <!-- ELSE -->
-                        <img src="http://tio.by/uploads/fields_files/{PAGE_ROW_AVATAR}" alt="">
+                        <img src="http://tio.by/uploads/fields_files/{PAGE_ROW_AVATAR}" alt="" width="90" height="70">
                         <!-- ENDIF -->
                     </a>
                 </div>
@@ -32,7 +30,7 @@
     </div>
             </article>
             
-</div>
+
 
 
 <!-- END: PAGE_ROW -->

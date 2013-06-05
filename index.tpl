@@ -16,11 +16,10 @@
         </div>
         <nav id="sidebar">
             <ul>
-                <li><a href="#">Туризм и отдых в Беларуси</a></li>
-                <li><a href="#">Каталог агроусадеб Беларуси</a></li>
-                <li><a href="#">Дикая природа Беларуси</a></li>
-                <li><a href="#">Портал PHOTO.BY</a></li>
-                <li><a href="#">Авиабилеты</a></li>
+                <li><a href="http://belarus.tio.by">Туризм и отдых в Беларуси</a></li>
+                <li><a href="http://belarus.tio.by">Каталог агроусадеб Беларуси</a></li>
+                <li><a href="http://wildlife.by">Дикая природа Беларуси</a></li>
+                <li><a href="http://photo.by">Портал PHOTO.BY</a></li>
             </ul>
         </nav>
         <div class="margintop10">
@@ -34,7 +33,7 @@
                 <li><a href="#popular" data-toggle="tab"><h2>Популярное</h2></a></li>
                 <li><a href="#discuss" data-toggle="tab"><h2>Обсуждаемое</h2></a></li>
             </ul>
-            <div class="tab-content popular">
+            <div class="tab-content aside_popular">
                 <ul class="tab-pane" id="popular">
                     {PHP|blockrecent('popular',10)}
                </ul>
@@ -42,9 +41,13 @@
                     {PHP|blockrecent('discuss',5)}
                </ul>
             </div>
-        
+
         <div class="margintop10">
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
+        </div>
+
+        <div class="margintop10">
+            {INDEX_BLOCK_COMPANY_NEWS}
         </div>
     </aside>
 
@@ -55,14 +58,8 @@
 
         <div class=" row IDX_blocks">
             <article class="span4 hot">
-                <h2><a href="#">Горячие предложения</a></h2>
-                <p><img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block.jpg" alt="" width="90" height="70" />
-                    Лето-2013! Бронируй сейчас! - 30% на Болгарию, Грецию, Турцию, Италию 
-                </p>
-                <p class="no-border"><img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block.jpg" alt="" width="90" height="70" />
-                    Лето-2013! Бронируй сейчас! - 30% на Болгарию, Грецию, Турцию, Италию 
-                </p>
-                <a href="#" class="hot_more">Смотреть больше предложений</a>
+                <h2><a href="{PHP|cot_url('page', 'c=calendar')}">Горячие события</a></h2>
+                {INDEX_BLOCK_CALENDAR}
             </article>
             <article class="span4">
                 <h2><a href="#">Мнение</a></h2>
@@ -75,16 +72,12 @@
                 <a href="#" class="more">Смотреть больше предложений</a>
             </article>
             <article class="span4">
-                <h2><a href="#">Клуб путешественников</a></h2>
+                <h2><a href="{PHP|cot_url('page', 'c=gallery')}">Клуб фотопутешественников</a></h2>
                 {INDEX_BLOCK_GALLERY}
             </article>
-            <article class="span4">
-                <h2><a href="#">Экспертиза</a></h2>
+            <article class="span4 expertise">
+                <h2><a href="{PHP|cot_url('page', 'c=expertise')}">Экспертиза</a></h2>
                 {INDEX_BLOCK_EXPERTISE}
-                <!--<img class="pull-left marginright10" src="themes/{PHP.theme}/img/IDX_block.jpg" alt="" width="90" height="70" />
-                <h3><a href="#">Тема: <span class="theme">Как устроиться аниматором?</span></a></h3>
-                <div>“На форум нашего сайта пришел вопрос от читателя, желающего поработать аниматором. О том, насколько легко найти подобную работу, кто из туроператоров обучает и трудоустраивает «массовиков-затейников», а также сколько можно заработать на пляжах Турции и Египта – в нашем обзоре.”
-                </div>-->
             </article>
         </div>
 
@@ -209,12 +202,12 @@
         <div class="row IDX_blog">
 
             <div class="span8">
-                <h2><a href="/blogs">Блоги</a></h2>
+                <h2><a href="{PHP|cot_url('page', 'c=blogs')}">Блоги</a></h2>
             </div>
+</div>
+            <div class="row">{INDEX_BLOCK_BLOGS}</div>
 
-            {INDEX_BLOCK_BLOGS}
-
-            <div class="span8"><a class="more" href="{PHP|cot_url('new', 'c=blogs')}">Все блоги</a></div>
+            <div class="span8"><a class="more" href="{PHP|cot_url('page', 'c=blogs')}">Все блоги</a></div>
 
         </div>
     </div>

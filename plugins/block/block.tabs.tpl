@@ -28,7 +28,6 @@
                 <!-- ELSE -->
                 <img class="pull-left marginright10" src="http://tio.by/uploads/fields_files/{PAGE_ROW_AVATAR}" alt="" width="250" height="188">
                 <!-- ENDIF -->
-                <img  class="pull-left marginright10" src="./datas/photos/thumb_{PAGE_AVATAR}" alt="" width="250" height="188">
 
 		<p class="date">{PAGE_ROW_DATE}</p>
 		<p>{PAGE_ROW_TEXT_CUT}</p>

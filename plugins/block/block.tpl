@@ -14,7 +14,7 @@
 <!-- END: PAGE_TAGS_ROW -->
 <!-- END: PAGE_TAGS -->
 	</h3>
-        <h4><a href="{PAGE_ROW_SHORTTITLE}" title="{PAGE_ROW_SHORTTITLE}">{PAGE_ROW_SHORTTITLE}</a></h4>
+        <h4><a href="{PAGE_ROW_URL}" title="{PAGE_ROW_SHORTTITLE}">{PAGE_ROW_SHORTTITLE}</a></h4>
     </div>
 </section>
 

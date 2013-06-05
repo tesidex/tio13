@@ -130,7 +130,7 @@
         <div class="row">
             <div class="span8 IDX_blocks2">
 
-                <h2><a href="{PHP|cot_url('new', 'c=newspaper')}">Газета "Туризм и отдых"</a></h2>
+                <h2><a href="{PHP|cot_url('page', 'c=newspaper')}">Газета "Туризм и отдых"</a></h2>
                 <article>
                     {INDEX_BLOCK_NEWSPAPER}
                 </article>

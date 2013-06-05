@@ -16,6 +16,7 @@
                 <label class="control-label">{NEWADD_TOP_TAGS}:</label>
                 <div class="controls">
                     {NEWADD_FORM_TAGS} ({NEWADD_TOP_TAGS_HINT})
+		    {NEWADD_FORM_DICT}
                 </div>
             </div>
             <!-- END: TAGS -->

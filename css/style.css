@@ -153,14 +153,27 @@ nav {
     padding-left: 10px; 
  }
 .IDX_blocks h2 a    { color: #fff; }
-.IDX_blocks p   { 
-    height: 90px; 
-    border-bottom: 1px solid #e2e2e2;
-    line-height: 1.2em;
-    text-decoration: underline; 
+.IDX_block h3   { 
+    border-bottom: 1px solid #E2E2E2;
     color: #626262;
+    font-size: 1em;
+    font-weight: normal;
+    height: 90px;
+    line-height: 1.2em;
+    margin: 0;
+    text-decoration: underline;
+}
+.IDX_block p   { 
+    border-bottom: 1px solid #E2E2E2;
+    color: #626262;
+    font-size: 1em;
+    font-weight: normal;
+    height: 90px;
+    line-height: 1.2em;
+    text-decoration: underline;
 }
 .hot h2         { background: #b0251b; }
+.hot h3		{ display: inline;  }
 .hot_more       { 
     color: #b0251b;
     background: url('../img/more.jpg') no-repeat center left;

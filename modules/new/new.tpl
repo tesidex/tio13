@@ -1,48 +1,6 @@
 <!-- BEGIN: MAIN -->
 <div class="row margintop10">
-    <aside class="span4_left">
-        <div>
-            <h3>Поиск по сайту:</h3>
-            <form id="search" action="{PHP|cot_url('plug','e=search')}" method="post" class="form-search" >
-
-                <input type="text" name="sq" onblur="if(this.value=='') this.value='{PHP.L.Search}...';" onfocus="if(this.value=='{PHP.L.Search}...') this.value='';">
-
-                <button type="submit" class="btn pull-right" title="{PHP.L.Search}">Искать</button>
-            </form>
-        </div>
-        <nav id="sidebar">
-            <ul>
-                <li><a href="#">Туризм и отдых в Беларуси</a></li>
-                <li><a href="#">Каталог агроусадеб Беларуси</a></li>
-                <li><a href="#">Дикая природа Беларуси</a></li>
-                <li><a href="#">Портал PHOTO.BY</a></li>
-                <li><a href="#">Авиабилеты</a></li>
-            </ul>
-        </nav>
-        <div class="margintop10">
-            <img src="themes/{PHP.theme}/img/LEFT_banner1.jpg" alt="" width="240" height="400" />
-        </div>
-        <div class="margintop10">
-            <img src="themes/{PHP.theme}/img/LEFT_banner2.jpg" alt="" width="240" height="200" />
-        </div>
-        <div class="">
-            <ul class="nav-tabs" id="TABS1">
-                <li><a href="#popular" data-toggle="tab"><h2>Популярное</h2></a></li>
-                <li><a href="#discuss" data-toggle="tab"><h2>Обсуждаемое</h2></a></li>
-            </ul>
-            <div class="tab-content popular">
-                <ul class="tab-pane active" id="popular">
-                    {PHP|blockrecent('popular',10)}
-               </ul>
-                <ul class="tab-pane" id="discuss">
-                    {PHP|blockrecent('discuss',5)}
-               </ul>
-            </div>
-        </div>
-        <div class="margintop10">
-            <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
-        </div>
-    </aside>
+   {FILE "{PHP.cfg.themes_dir}/{PHP.theme}/inc/sidebar.tpl"}
     <div class="span8">
         <div class="row">
             <article class="span8">

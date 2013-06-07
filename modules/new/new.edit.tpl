@@ -11,6 +11,7 @@
                 </div>
             </div>
             <hr />
+	    <!-- IF {PHP.dict_id} -->
             <!-- BEGIN: TAGS -->
             <div class="control-group">
                 <label class="control-label">{NEWEDIT_TOP_TAGS}:</label>
@@ -19,6 +20,7 @@
                 </div>
             </div>
             <!-- END: TAGS -->
+	    <!-- ENDIF -->
             <div class="control-group">
                 <label class="control-label">{NEWEDIT_FORM_COUNTRY_TITLE}:</label>
                 <div class="controls">

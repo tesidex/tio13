@@ -53,7 +53,7 @@ nav {
 .nav1 li a  { display: block; float: none; padding: 25px 10px; color: #626262; text-decoration: none; }
 .nav1 li a:hover  { color: #1a3a75; }
 .nav2       { background: #1a3a75; height: 31px; margin-top: 10px; text-transform: uppercase; }
-.nav2 li    { line-height: 0.8em; }
+.nav2 li    { line-height: 0.9em; }
 .nav2 li:hover  { background: #626262; }
 .nav li a   { font-size: 12px; }
 .soc_buttons        { padding-top: 20px; float: right; }
@@ -172,8 +172,9 @@ nav {
     line-height: 1.2em;
     text-decoration: underline;
 }
-.hot h2         { background: #b0251b; }
-.hot h3		{ display: inline;  }
+.hot h2         { background: #b0251b; font-size: 14px; line-height: 2.2em; text-transform: uppercase; }
+.hot h2 a	{ color: #fff; padding-left: 10px; }
+.hot h3		{ display: inline; line-height: 1em; }
 .hot_more       { 
     color: #b0251b;
     background: url('../img/more.jpg') no-repeat center left;
@@ -210,12 +211,15 @@ nav {
     line-height: 2em; 
     padding-left: 10px;
 }
+.IDX_blog > article:nth-child(2n) { clear: both; }
 .IDX_tabs li a:hover    { color: #626262; background: url('../img/tabs_hover.png') no-repeat center top; }
 .IDX_blog h2 a          { color: #fff; }
 .IDX_blog h3            { margin: 0; line-height: 1em; }
 .IDX_blog h3 a          { font-size: 13px; text-decoration: underline; color: #1a3a74; margin: 0; }
 .IDX_blog article       {  border-bottom: 1px solid #e2e2e2; margin-bottom: 10px; padding-bottom: 10px; }
 .IDX_blog p             { margin: 0; }
+.LIST_projects h1	{ padding-left: 10px; color: #fff; background: #b0251b; font-size: 14px; line-height: 2.2em; text-transform: uppercase; }
+.LIST_projects h1 > .span2  { overflow: hidden; }
 .small_grey             { color: #626262; font-weight: bold; font-size: 11px; border-right: 1px solid #626262; padding-right: 5px; }
 .comments               { color: #1a3a74; font-weight: bold; background: url('../img/comments.png') no-repeat center left; padding-left: 20px; font-size: 11px; }
 .comments a             { color: #1a3a74; text-decoration: underline; }

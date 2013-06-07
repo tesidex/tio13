@@ -1,6 +1,10 @@
 <!-- BEGIN: BLOCK -->
 
 <!-- BEGIN: PAGE_ROW -->
+<!-- IF {PAGE_ROW_ODDEVEN} == "odd" -->
+            </div>
+	    <div class="row">
+<!-- ENDIF -->		
     <article class="span4">
     <div class="row-fluid">
         

@@ -40,7 +40,8 @@
             <img src="themes/{PHP.theme}/img/LEFT_banner3.jpg" alt="" width="240" height="200" />
         </div>
 
-        <div class="margintop10">
+        <div class="margintop10 hot">
+	    <h2><a href="{PHP|cot_url('new', 'c=company-news')}">Новости компаний</a></h2>
             {INDEX_BLOCK_COMPANY_NEWS}
         </div>
     </aside>

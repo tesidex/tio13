@@ -625,7 +625,7 @@ h6 small {
 h1,
 h2,
 h3 {
-  line-height: 20px;
+  line-height: 30px;
 }
 h1 {
   font-size: 35.75px;
@@ -731,7 +731,7 @@ dd {
   margin-left: 180px;
 }
 hr {
-  margin: 15px 0;
+  margin: 10px 0;
   border: 0;
   border-top: none;
   border-bottom: 1px solid #E2E2E2;

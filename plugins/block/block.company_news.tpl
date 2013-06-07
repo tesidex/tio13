@@ -2,8 +2,8 @@
 
 <!-- BEGIN: PAGE_ROW -->
 <section class="row-fluid">
-    <div class="span12 hot">
-	<h2><a href="{PHP|cot_url('new', 'c=company-news')}">Новости компаний</a></h2>
+    <div class="span12">
+	
         <!-- IF {PAGE_ROW_AVATAR} -->
         <div class="pull-left">
             <a href="{PAGE_ROW_URL}" class="pull-left marginright10">
@@ -15,8 +15,10 @@
             </a>
         </div>
         <!-- ENDIF -->
-        <h3 class="jscut"><a class="theme" href="{PAGE_ROW_URL}" title="{PAGE_ROW_TITLE}">{PAGE_ROW_SHORTTITLE}</a></h3>
+        <h3 class="jscut"><a href="{PAGE_ROW_URL}">{PAGE_ROW_SHORTTITLE}</a></h3>
+	<hr />
     </div>
+    
 </section>
 
 <!-- END: PAGE_ROW -->
